@@ -1,0 +1,11 @@
+- name: Blog
+  link: /blog
+  dropdown:
+    - name: First Auto Post
+      link: /jekyll/update/2020/05/06/welcome-to-jekyll.html
+    - name: Another Site tool
+      link: /yet-another-website-tool
+    - name: Theme Choice
+      link: /theme-choice
+- name: About
+  link: /about/
