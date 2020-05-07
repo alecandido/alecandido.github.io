@@ -281,6 +281,7 @@ DEPENDENCIES
   jekyll (~> 3.8.5)
   jekyll-admin (~> 0.10.1)
   jekyll-feed (~> 0.12)
+  jekyll-github-metadata
   jekyll-remote-theme
   jekyll-seo-tag
   minima (~> 2.5)

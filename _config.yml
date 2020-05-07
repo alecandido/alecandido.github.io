@@ -31,22 +31,22 @@ markdown: kramdown
 
 # Build settings
 #theme: minima
-theme: bulma-clean-theme
-remote-theme: bulma-clean-theme
+#theme: bulma-clean-theme
+remote-theme: https://github.com/chrisrhymes/bulma-clean-theme/
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - github-pages
   - jekyll-remote-theme
+  - jekyll-github-metadata
 
 defaults:
-  -
-    scope:
+  - scope:
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
     values:
       author: "Alessandro"

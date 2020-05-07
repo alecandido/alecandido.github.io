@@ -24,6 +24,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-remote-theme"
   gem "github-pages", "~> 204"
+  gem "jekyll-github-metadata"
 
   gem "bulma-clean-theme"
 end
