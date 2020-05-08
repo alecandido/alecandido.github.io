@@ -32,7 +32,7 @@ markdown: kramdown
 # Build settings
 #theme: minima
 #theme: bulma-clean-theme
-remote-theme: https://github.com/chrisrhymes/bulma-clean-theme/
+remote-theme: "chrisrhymes/bulma-clean-theme"
 
 plugins:
   - jekyll-feed
