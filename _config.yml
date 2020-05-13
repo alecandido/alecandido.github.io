@@ -52,6 +52,11 @@ defaults:
       author: "Alessandro"
       layout: "page" # overrides previous default layout
       show-sidebar: false
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
 
 
 # Exclude from processing.
@@ -74,4 +79,4 @@ defaults:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-github: [metadata] 
+github: [metadata]
