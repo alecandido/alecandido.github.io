@@ -57,6 +57,8 @@ defaults:
     values:
       image: true
 
+include:
+  - "node_modules/lorem-ipsum/dist/index.js"
 
 
 # Exclude from processing.

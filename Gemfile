@@ -13,8 +13,10 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 3.8.5"
+#gem "jekyll", "~> 4.0"
+#gem "jekyll", github: "jekyll/jekyll"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5"
+#gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # If you have any plugins, put them here!
@@ -25,8 +27,6 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme"
   gem "github-pages", "~> 204"
   gem "jekyll-github-metadata"
-
-  gem "bulma-clean-theme"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -3,6 +3,11 @@ html, body {
    margin: 0;
 }
 
+#home {
+   height: 100%;
+   margin: 0;
+}
+
 .home-col {
    height: 100%;
    margin: 0;
@@ -38,15 +43,21 @@ html, body {
 
 
 .launcher {
-   box-shadow: 0 6px 6px #888;
+   @extend .button;
+   @extend .has-text-left;
+   //@include .is-outlined;
+
+   box-shadow: 0 3px 3px #888;
 
    min-height: 4rem;
 
    margin: 1rem;
-   border: 1px solid black;
+   //border: 1px solid black;
    border-radius: 8px;
    padding: 0.5rem;
    padding-left: 2.5rem;
+
+   align-items: flex-start;
    display: flex;
    flex-direction: column;
    justify-content: center;
