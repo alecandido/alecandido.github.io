@@ -3,6 +3,8 @@
     "@types/jquery": "^3.3.38",
     "bulma": "^0.8.2",
     "bulma-block-list": "^0.3.0",
+    "event-stream": "^4.0.1",
+    "gulp-rename": "^2.0.0",
     "jquery": "^3.5.1"
   },
   "license": "UNLICENSED",
