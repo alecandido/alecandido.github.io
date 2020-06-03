@@ -26,52 +26,32 @@ gulp.task("copy-html", function () {
 const ts_entries_pattern = "_ts/main-*.ts";
 const ts_entries = glob.sync(ts_entries_pattern);
 
-function task_factory(ts_entry) {
-  var watchedBrowserify = watchify(
-    browserify({
-      basedir: ".",
-      debug: true,
-      entries: ts_entry,
-      cache: {},
-      packageCache: {}
-    }).plugin(tsify)
-  );
+var watchedBrowserify = watchify(
+  browserify({
+    basedir: ".",
+    debug: true,
+    entries: ts_entries,
+    cache: {},
+    packageCache: {}
+  }).plugin(tsify)
+);
 
-  function bundle() {
-    return (
-      watchedBrowserify
-        .transform("babelify", {
-          presets: ["es2015"],
-          extensions: [".ts"]
-        })
-        .bundle()
-        .on("error", fancy_log)
-        //.pipe(source("bundle.js"))
-        .pipe(source(ts_entry))
-        // rename them to have "bundle as postfix"
-        .pipe(
-          rename({
-            extname: ".bundle.js"
-          })
-        )
-        .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
-        .pipe(uglify())
-        .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("assets/js"))
-    );
-  }
-
-  //watchedBrowserify.on("update", bundle);
-  //watchedBrowserify.on("log", fancy_log);
-
-  return bundle;
+function bundle() {
+  return watchedBrowserify
+    .transform("babelify", {
+      presets: ["es2015"],
+      extensions: [".ts"]
+    })
+    .bundle()
+    .on("error", fancy_log)
+    .pipe(source("bundle.js"))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("assets/js"));
 }
 
-var tasks = ts_entries.map(task_factory);
-function f(tasks) {
-  return es.merge.apply(null, tasks);
-}
-
-//gulp.task("default", gulp.series(gulp.parallel("copy-html"), bundle));
-gulp.task("default", gulp.series(gulp.parallel("copy-html"), f(tasks)));
+gulp.task("default", gulp.series(gulp.parallel("copy-html"), bundle));
+watchedBrowserify.on("update", bundle);
+watchedBrowserify.on("log", fancy_log);
