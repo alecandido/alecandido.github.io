@@ -1,0 +1,55 @@
+html, body {
+   height: 100%;
+   margin: 0;
+}
+
+#project-list {
+   height: 100%;
+   margin: 0;
+   padding: 2% 5%;
+   //padding-top: 2%;
+}
+
+.project {
+   box-shadow: 0 3px 3px #888;
+
+   min-height: 7rem;
+
+   margin: 1rem;
+   //border: 1px solid black;
+   border-radius: 4px;
+   padding: 1rem;
+   padding-top: 2.5rem;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.project:nth-child(odd) {
+   background-color: #e9f0f2;
+
+   padding-left: 3.5rem;
+   align-items: flex-start;
+}
+
+.project:nth-child(even) {
+   border: 2px solid black;
+   border-radius: 4px;
+   box-shadow: 0 5px 5px #888;
+
+   padding-right: 3.5rem;
+   text-align: right;
+   align-items: flex-end;
+}
+
+.project span {
+   @extend .has-text-weight-bold;
+   @extend .is-size-5;
+
+   margin-bottom: 1em;
+}
+
+.project p {
+   max-width: 70%
+}
