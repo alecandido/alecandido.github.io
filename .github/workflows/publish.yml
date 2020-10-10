@@ -1,0 +1,45 @@
+name: publish cv
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+      - name: Set up Node 🧶
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "10"
+      - name: Build - Home 🔨 🏠
+        run: |
+          cd home
+          mkdir out
+          yarn
+          yarn dart-sass _sass/_home.scss:assets/css/home.css --no-source-map
+          cp index.html favicon.png out
+          cp -r assets out
+      - name: Build - About 🔨 📘
+        run: |
+          cd about
+          yarn
+          yarn deploy
+      - name: Prepare deployment ⌛
+        run: |
+          # fetch all branches
+          git fetch --depth=1
+          git checkout gh-pages
+          mv home/out .
+          mv about/out about
+      - name: Deploy 🚀
+        uses: EndBug/add-and-commit@v4.4.0
+        with:
+          message: "Automatically deploying: ${{ github.ref }} 🚀"
+          ref: "gh-pages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_SITE }}
