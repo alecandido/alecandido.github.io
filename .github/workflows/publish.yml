@@ -1,4 +1,4 @@
-name: publish cv
+name: publish website
 
 on:
   push:
