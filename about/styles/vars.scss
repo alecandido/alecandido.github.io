@@ -1,0 +1,7 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+$primary: $blue;
+$primary-inverted: findColorInvert($green);
+
+@import "../node_modules/bulma/sass/utilities/derived-variables";
