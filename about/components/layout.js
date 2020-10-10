@@ -5,7 +5,7 @@ import styles from "./layout.module.scss";
 import utilStyles from "../styles/utils.module.css";
 
 const name = "Alessandro Candido";
-export const siteTitle = "projects - " + name;
+export const siteTitle = "about - " + name;
 
 export default function Layout({ children, home }) {
   return (
@@ -41,7 +41,7 @@ export default function Layout({ children, home }) {
         <header className={styles.header}>
           {home ? (
             <>
-              <h1>Projects</h1>
+              <h1>About</h1>
               <div className={styles.backToHomeHeader}>
                 <a href="/">← Back to home</a>
               </div>
@@ -58,7 +58,7 @@ export default function Layout({ children, home }) {
         ) : (
           <div className={styles.backToHome}>
             <Link href="/" as={process.env.BACKEND_URL + "/"}>
-              <a>← Back to projects</a>
+              <a>← Back to about</a>
             </Link>
           </div>
         )}

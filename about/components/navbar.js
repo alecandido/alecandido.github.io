@@ -8,7 +8,7 @@ class NavbarBurger extends React.Component {
 
     this.state = {
       inactiveClass: styles["my-navbar-burger"],
-      activeClass: styles["my-navbar-burger-active"]
+      activeClass: styles["my-navbar-burger-active"],
     };
   }
 
@@ -38,7 +38,7 @@ function NavbarLogo(props) {
   return (
     <div className={styles["my-navbar-logo-holder"]}>
       <Link href="/" as={process.env.BACKEND_URL + "/"}>
-        <a className={styles["my-navbar-logo"]}>Projects</a>
+        <a className={styles["my-navbar-logo"]}>About</a>
       </Link>
     </div>
   );
@@ -51,7 +51,7 @@ class NavbarMenu extends React.Component {
 
     this.state = {
       inactiveClass: styles["my-navbar-menu"],
-      activeClass: styles["my-navbar-menu-active"]
+      activeClass: styles["my-navbar-menu-active"],
     };
   }
 
@@ -104,7 +104,7 @@ class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      activeBurger: false
+      activeBurger: false,
     };
   }
 

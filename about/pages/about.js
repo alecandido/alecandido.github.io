@@ -13,7 +13,7 @@ export default function About() {
       <div>
         Back to{" "}
         <Link href="/" as={process.env.BACKEND_URL + "/"}>
-          <a>Projects</a>
+          <a>About</a>
         </Link>
       </div>
     </Layout>
