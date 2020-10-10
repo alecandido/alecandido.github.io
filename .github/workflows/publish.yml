@@ -34,8 +34,8 @@ jobs:
           # fetch all branches
           git fetch --depth=1
           git checkout gh-pages
-          mv home/out .
-          mv about/out tmp; rm -rf about; mv tmp about
+          mv home/out/* .
+          mv about/out tmp; rm -rf about; mv -v tmp about
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0
         with:
