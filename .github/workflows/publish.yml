@@ -24,6 +24,7 @@ jobs:
           yarn dart-sass _sass/_home.scss:assets/css/home.css --no-source-map
           cp index.html favicon.png out
           cp -r assets out
+          rm -rf node_modules
       - name: Build - About 🔨 📘
         run: |
           cd about
