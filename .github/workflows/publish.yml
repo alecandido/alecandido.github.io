@@ -35,8 +35,9 @@ jobs:
           # fetch all branches
           git fetch --depth=1
           git checkout gh-pages
-          mv home/out/* .
-          mv about/out tmp; rm -rf about; mv -v tmp about
+          rsync -av --delete --remove-source-files --ignore-existing home/out/* .
+          rsync -av --delete --remove-source-files --ignore-existing about/out/* about
+          find . -depth -type d -empty -delete
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0
         with:
