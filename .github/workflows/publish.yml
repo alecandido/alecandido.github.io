@@ -36,7 +36,10 @@ jobs:
           git fetch --depth=1
           git checkout gh-pages
           rsync -av --delete --remove-source-files home/out/* .
+          cat about/out/index.html
+          cat about/index.html
           rsync -av --delete --remove-source-files about/out/* about
+          cat about/index.html
           find . -depth -type d -empty -delete
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0
