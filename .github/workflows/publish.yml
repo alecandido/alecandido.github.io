@@ -40,8 +40,9 @@ jobs:
           shopt -s dotglob
           # copy files in final location
           rsync -av --delete --remove-source-files home/out/* .
-          #rsync -av --delete --remove-source-files about/out/* about
-          #find . -depth -type d -empty -delete
+          rsync -av --delete --remove-source-files about/out/* about
+          find . -depth -type d -empty -delete
+          mv about/.nojekyll .
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0
         with:
