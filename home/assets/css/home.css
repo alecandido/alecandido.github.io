@@ -20485,7 +20485,8 @@ div.highlight {
   background-color: #f8f8f8;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -20496,7 +20497,6 @@ html, body {
 }
 
 .home-col {
-  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -20507,8 +20507,15 @@ html, body {
   flex-grow: 0;
 }
 
-#presentation-column {
-  background-color: #dde7f0;
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: unset;
+  max-height: unset;
+  z-index: -1;
 }
 
 #presentation {
@@ -20524,6 +20531,10 @@ html, body {
 #titles {
   padding-left: 1rem;
   padding-bottom: 1rem;
+}
+
+#launcher-column {
+  background-color: rgba(220, 230, 239, 0.95);
 }
 
 .launcher {

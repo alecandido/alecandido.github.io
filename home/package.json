@@ -7,6 +7,9 @@
   "author": "Alessandro Candido",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "css": "dart-sass _sass/_home.scss:assets/css/home.css --no-source-map"
+  },
   "dependencies": {
     "bulma": "^0.9.0",
     "bulma-block-list": "^0.4.0",
