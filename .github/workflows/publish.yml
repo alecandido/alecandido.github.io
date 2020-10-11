@@ -39,6 +39,7 @@ jobs:
           rsync -av --delete --remove-source-files home/out/* .
           rsync -av --delete --remove-source-files about/out/* about
           find . -depth -type d -empty -delete
+          sudo apt install tree
           tree
           cat about/index.html
       - name: Deploy 🚀
