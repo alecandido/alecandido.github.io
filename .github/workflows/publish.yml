@@ -30,6 +30,7 @@ jobs:
           cd about
           yarn
           yarn deploy
+          rm -rf node_modules
       - name: Prepare deployment ⌛
         run: |
           # fetch all branches
