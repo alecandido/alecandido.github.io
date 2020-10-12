@@ -8,5 +8,5 @@ module.exports = {
   exportPathMap: () => ({
     "/": { page: "/" },
   }),
-  assetPrefix: isProd ? "/about" : "",
+  assetPrefix: isProd ? "/teaching" : "",
 };

@@ -25,9 +25,9 @@ jobs:
           cp index.html favicon.png out
           cp -r assets out
           rm -rf node_modules
-      - name: Build - About 🔨 📘
+      - name: Build - Teaching 🔨 📘
         run: |
-          cd about
+          cd teaching
           yarn
           yarn deploy
           rm -rf node_modules
@@ -40,9 +40,9 @@ jobs:
           shopt -s dotglob
           # copy files in final location
           rsync -av --delete --remove-source-files home/out/* .
-          rsync -av --delete --remove-source-files about/out/* about
+          rsync -av --delete --remove-source-files teaching/out/* teaching
           find . -depth -type d -empty -delete
-          mv about/.nojekyll .
+          mv teaching/.nojekyll .
           rm -rf _resources
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0

@@ -38,7 +38,7 @@ function NavbarLogo(props) {
   return (
     <div className={styles["my-navbar-logo-holder"]}>
       <Link href="/" as={process.env.BACKEND_URL + "/"}>
-        <a className={styles["my-navbar-logo"]}>About</a>
+        <a className={styles["my-navbar-logo"]}>Teaching</a>
       </Link>
     </div>
   );
@@ -74,7 +74,7 @@ class NavbarMenu extends React.Component {
             <a className={styles["my-navbar-link"]}>More</a>
 
             <div className={styles["my-navbar-dropdown"]}>
-              <a className={styles["my-navbar-item"]}>About</a>
+              <a className={styles["my-navbar-item"]}>Teaching</a>
               <a className={styles["my-navbar-item"]}>Jobs</a>
               <a className={styles["my-navbar-item"]}>Contact</a>
               <hr className={styles["my-navbar-divider"]} />
