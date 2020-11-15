@@ -1,6 +1,7 @@
 @import "../node_modules/bulma/sass/utilities/functions.sass";
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
 @import "../node_modules/bulma/sass/utilities/mixins.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
 
 html,
 body {
@@ -68,6 +69,8 @@ body {
   //background-color: hsla(208, 39%, 90%, 0.95);
   background-color: hsla(208, 10%, 80%, 0.2);
   backdrop-filter: blur(8px) brightness(130%);
+
+  flex-grow: 0;
 }
 
 .launcher {
@@ -80,6 +83,7 @@ body {
   color: findColorInvert(attr(background-color));
 
   min-height: 4rem;
+  min-width: 20rem;
 
   margin: 1rem;
   border: 2px ridge hsla(0, 1%, 39%, 0.4);
@@ -91,6 +95,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include mobile {
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 80%;
+  }
+  @include widescreen {
+    background-color: white;
+    width: 300px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
 }
 
 .launcher span {
