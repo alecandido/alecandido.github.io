@@ -1,3 +1,6 @@
+@import "../node_modules/bulma/sass/utilities/functions.sass";
+@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+
 html,
 body {
   height: 100%;
@@ -50,7 +53,9 @@ body {
 }
 
 #launcher-column {
-  background-color: hsla(208, 39%, 90%, 0.95);
+  //background-color: hsla(208, 39%, 90%, 0.95);
+  background-color: hsla(208, 10%, 80%, 0.2);
+  backdrop-filter: blur(8px) brightness(130%);
 }
 
 .launcher {
@@ -58,13 +63,15 @@ body {
   @extend .has-text-left;
   //@include .is-outlined;
 
-  box-shadow: 0 3px 3px #888;
+  //box-shadow: 0 3px 3px #888;
+  //border-color: transparent;
+  color: findColorInvert(attr(background-color));
 
   min-height: 4rem;
 
   margin: 1rem;
-  //border: 1px solid black;
-  border-radius: 8px;
+  border: 2px ridge hsla(0, 1%, 39%, 0.4);
+  border-radius: 10px;
   padding: 0.5rem;
   padding-left: 2.5rem;
 
@@ -76,4 +83,24 @@ body {
 
 .launcher span {
   @extend .has-text-weight-bold;
+}
+
+#cv {
+  background-color: hsla(348, 95%, 66%, 1);
+}
+
+#projects {
+  background-color: hsla(141, 53%, 50%, 1);
+}
+
+#logbook {
+  background-color: hsla(48, 87%, 66%, 1);
+}
+
+#work {
+  background-color: hsla(204, 71%, 50%, 1);
+}
+
+#about {
+  background-color: hsla(16, 90%, 66%, 1);
 }

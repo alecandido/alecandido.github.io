@@ -20534,18 +20534,40 @@ body {
 }
 
 #launcher-column {
-  background-color: rgba(220, 230, 239, 0.95);
+  background-color: rgba(199, 204, 209, 0.2);
+  backdrop-filter: blur(8px) brightness(130%);
 }
 
 .launcher {
-  box-shadow: 0 3px 3px #888;
+  color: #fff;
   min-height: 4rem;
   margin: 1rem;
-  border-radius: 8px;
+  border: 2px ridge rgba(100, 98, 98, 0.4);
+  border-radius: 10px;
   padding: 0.5rem;
   padding-left: 2.5rem;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#cv {
+  background-color: #fb5677;
+}
+
+#projects {
+  background-color: #3cc36b;
+}
+
+#logbook {
+  background-color: #f4d65d;
+}
+
+#work {
+  background-color: #2592da;
+}
+
+#about {
+  background-color: #f6845a;
 }
