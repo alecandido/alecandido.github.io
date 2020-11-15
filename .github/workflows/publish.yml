@@ -20,16 +20,10 @@ jobs:
         run: |
           cd home
           yarn
-          yarn dart-sass _sass/_home.scss:assets/css/home.css --no-source-map
+          yarn css
           mkdir out
           cp index.html favicon.png out
           cp -r assets out
-          rm -rf node_modules
-      - name: Build - Teaching 🔨 📘
-        run: |
-          cd teaching
-          yarn
-          yarn deploy
           rm -rf node_modules
       - name: Prepare deployment ⌛
         run: |
@@ -40,9 +34,7 @@ jobs:
           shopt -s dotglob
           # copy files in final location
           rsync -av --delete --remove-source-files home/out/* .
-          rsync -av --delete --remove-source-files teaching/out/* teaching
           find . -depth -type d -empty -delete
-          mv teaching/.nojekyll .
           rm -rf _resources
       - name: Deploy 🚀
         uses: EndBug/add-and-commit@v4.4.0
