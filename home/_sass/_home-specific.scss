@@ -1,5 +1,6 @@
 @import "../node_modules/bulma/sass/utilities/functions.sass";
 @import "../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../node_modules/bulma/sass/utilities/mixins.sass";
 
 html,
 body {
@@ -45,11 +46,22 @@ body {
   border-radius: 12px;
   padding: 1.5rem;
   padding-left: 3rem;
+
+  @include mobile {
+    padding: 1.5rem;
+  }
+  @include widescreen {
+    margin: calc(50% - 20rem);
+  }
 }
 
 #titles {
   padding-left: 1rem;
   padding-bottom: 1rem;
+
+  @include mobile {
+    padding-left: 0;
+  }
 }
 
 #launcher-column {
