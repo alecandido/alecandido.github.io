@@ -23,6 +23,12 @@ var launcherCol = document.querySelector("#launcher-column");
 var launchers = launcherCol.getElementsByClassName("launcher");
 var presentationCol = document.querySelector("#presentation-column");
 
+function swapCols() {
+  let home = document.querySelector("#home");
+
+  home.insertBefore(home.children[1], home.children[0]);
+}
+
 menuBtn.onclick = function () {
   menuBtn.classList.toggle("open");
   launcherCol.classList.toggle("close");
@@ -30,4 +36,8 @@ menuBtn.onclick = function () {
     launcher.classList.toggle("close");
   });
   presentationCol.classList.toggle("static-pos");
+
+  if (window.innerWidth < 768) {
+    swapCols();
+  }
 };
