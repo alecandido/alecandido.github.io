@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "css": "dart-sass _sass/_home.scss:assets/css/home.css --no-source-map"
+    "css": "dart-sass _sass/_home.scss:assets/css/home.css --no-source-map",
+    "view": "python3 -m http.server 8000"
   },
   "dependencies": {
     "bulma": "^0.9.0",

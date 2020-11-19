@@ -22297,6 +22297,15 @@ body {
   z-index: -1;
 }
 
+@media screen and (max-width: 768px) {
+  #presentation-column {
+    position: fixed;
+  }
+  #presentation-column.static-pos {
+    position: static;
+  }
+}
+
 #presentation {
   background-color: white;
   margin: 2rem;
@@ -22308,6 +22317,7 @@ body {
 @media screen and (max-width: 768px) {
   #presentation {
     padding: 1.5rem;
+    margin-top: calc(50px + 2rem);
   }
 }
 @media screen and (min-width: 1216px) {
@@ -22326,10 +22336,72 @@ body {
   }
 }
 
+.menu-toggle-btn {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  cursor: pointer;
+  margin: 15px;
+  padding: 1px 0px 0px 3px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+.menu-toggle-btn span {
+  background: #1d1d1b;
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 5px;
+  margin: 4px 0 4px 0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.3s linear;
+}
+.menu-toggle-btn span:first-child {
+  margin-top: 6px;
+}
+@media screen and (max-width: 768px) {
+  .menu-toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: calc(100vw - 70px);
+  }
+}
+.menu-toggle-btn.open {
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.menu-toggle-btn.open span:nth-child(1), .menu-toggle-btn.open span:nth-child(3) {
+  transform: translate(0px, 13px) rotate(-45deg) scalex(1.3);
+  margin: 0;
+}
+.menu-toggle-btn.open span:nth-child(2) {
+  height: 0;
+  margin: 0;
+}
+.menu-toggle-btn.open span:nth-child(3) {
+  transform: translate(0px, 9px) rotate(45deg) scalex(1.3);
+}
+@media screen and (max-width: 768px) {
+  .menu-toggle-btn.open {
+    top: 0;
+  }
+}
+
 #launcher-column {
   background-color: rgba(199, 204, 209, 0.2);
   backdrop-filter: blur(8px) brightness(130%);
   flex-grow: 0;
+}
+#launcher-column.close {
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  #launcher-column {
+    padding-top: 60px;
+  }
 }
 
 .launcher {
@@ -22360,6 +22432,9 @@ body {
     margin-left: 45px;
     margin-right: 45px;
   }
+}
+.launcher.close {
+  display: none;
 }
 
 #cv {

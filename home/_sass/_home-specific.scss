@@ -38,6 +38,15 @@ body {
   z-index: -1;
 }
 
+#presentation-column {
+  @include mobile {
+    position: fixed;
+    &.static-pos {
+      position: static;
+    }
+  }
+}
+
 #presentation {
   background-color: white;
 
@@ -49,6 +58,7 @@ body {
 
   @include mobile {
     padding: 1.5rem;
+    margin-top: calc(50px + 2rem);
   }
   @include widescreen {
     margin: calc(50% - 20rem);
@@ -64,12 +74,78 @@ body {
   }
 }
 
+.menu-toggle-btn {
+  position: absolute;
+  top: 0;
+  left: -60px;
+  cursor: pointer;
+
+  margin: 15px;
+  padding: 1px 0px 0px 3px;
+  width: 32px;
+  height: 32px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+
+  span {
+    background: #1d1d1b;
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 5px;
+    margin: 4px 0 4px 0;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.3s linear;
+
+    &:first-child {
+      margin-top: 6px;
+    }
+  }
+  @include mobile {
+    position: fixed;
+    top: 10px;
+    left: calc(100vw - 70px);
+  }
+  &.open {
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    span {
+      &:nth-child(1),
+      &:nth-child(3) {
+        transform: translate(0px, 13px) rotate(-45deg) scalex(1.3);
+        margin: 0;
+      }
+      &:nth-child(2) {
+        height: 0;
+        margin: 0;
+      }
+      &:nth-child(3) {
+        transform: translate(0px, 9px) rotate(45deg) scalex(1.3);
+      }
+    }
+    @include mobile {
+      top: 0;
+    }
+  }
+}
+
 #launcher-column {
   //background-color: hsla(208, 39%, 90%, 0.95);
   background-color: hsla(208, 10%, 80%, 0.2);
   backdrop-filter: blur(8px) brightness(130%);
 
   flex-grow: 0;
+
+  &.close {
+    padding: 0;
+  }
+
+  @include mobile {
+    padding-top: 60px;
+  }
 }
 
 .launcher {
@@ -105,6 +181,10 @@ body {
     width: 300px;
     margin-left: 45px;
     margin-right: 45px;
+  }
+
+  &.close {
+    display: none;
   }
 }
 
