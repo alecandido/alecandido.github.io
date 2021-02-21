@@ -76,6 +76,7 @@ body {
 }
 
 .menu-toggle-btn {
+  display: block;
   position: absolute;
   top: 0;
   left: calc(100vw - 80px);
@@ -110,7 +111,7 @@ body {
     left: calc(100vw - 70px);
   }
   &.open {
-    left: 0;
+    left: unset;
     background-color: rgba(255, 255, 255, 0.9);
 
     span {
@@ -147,6 +148,12 @@ body {
   @include mobile {
     padding-top: 60px;
   }
+}
+
+#launchers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .launcher {
