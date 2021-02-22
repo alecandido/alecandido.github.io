@@ -22,14 +22,14 @@ jobs:
           yarn
           yarn css
           mkdir out
-          cp index.html favicon.png out
-          cp -r assets out
+          mv index.html favicon.png out
+          mv assets out
           rm -rf node_modules
       - name: Prepare deployment ⌛
         run: |
           # fetch all branches
           git fetch --depth=1
-          git checkout gh-pages
+          git checkout -f gh-pages
           # include .files in * notation
           shopt -s dotglob
           # copy files in final location
