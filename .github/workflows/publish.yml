@@ -1,45 +1,65 @@
-name: publish website
+name: Publish Documents
 
 on:
   push:
     branches:
-      - master
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  publish:
+  pages:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: pages
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
-      - name: Set up Node 🧶
-        uses: actions/setup-node@v2-beta
+        uses: actions/checkout@v3
+      - name: Install Node.js 🪅
+        uses: actions/setup-node@v3
         with:
-          node-version: "12"
-      - name: Build - Home 🔨 🏠
-        run: |
-          cd home
-          yarn
-          yarn css
-          mkdir out
-          mv index.html favicon.png out
-          mv assets out
-          rm -rf node_modules
-      - name: Prepare deployment ⌛
-        run: |
-          # fetch all branches
-          git fetch --depth=1
-          git checkout -f gh-pages
-          # include .files in * notation
-          shopt -s dotglob
-          # copy files in final location
-          rsync -av --delete --remove-source-files home/out/* .
-          find . -depth -type d -empty -delete
-          rm -rf _resources
-      - name: Deploy 🚀
-        uses: EndBug/add-and-commit@v4.4.0
+          node-version: 16
+      - name: Install pnpm 💨
+        uses: pnpm/action-setup@v2
         with:
-          message: "Automatically deploying: ${{ github.ref }} 🚀"
-          ref: "gh-pages"
-        env:
-          GITHUB_TOKEN: ${{ secrets.PUBLISH_SITE }}
+          version: 7
+          run_install: false
+      - name: Get pnpm store directory 📍
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Setup pnpm cache 💾
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies 🛍️
+        run: pnpm install
+      - name: Build 🔨
+        run: pnpm build
+      - name: Upload website pages 🚀
+        uses: actions/upload-artifact@v3
+        with:
+          name: pages
+          path: pages/build/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v1
