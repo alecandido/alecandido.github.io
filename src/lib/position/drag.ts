@@ -5,9 +5,10 @@ export default (element: HTMLElement) => {
     startX = 0,
     startY = 0;
 
-  element.onmousedown = dragMouseDown;
+  element.ontouchstart = grab;
+  element.onmousedown = grab;
 
-  function dragMouseDown(event: MouseEvent) {
+  function grab(event: MouseEvent | TouchEvent) {
     event = event || window.event;
 
     // only act on the parent element, otherwise it will be impossible to
@@ -15,24 +16,44 @@ export default (element: HTMLElement) => {
     if (event.target !== element) {
       return;
     }
+
+    // TouchEvent has to be unwrapped
+    let locatedEvent = unwrapTouch(event);
+    if (locatedEvent === null) {
+      return;
+    }
     event.preventDefault();
 
     // get the mouse cursor position at startup:
-    startX = event.clientX;
-    startY = event.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
+    startX = locatedEvent.clientX;
+    startY = locatedEvent.clientY;
+
+    if ('type' in locatedEvent) {
+      document.onmouseup = release;
+      // call a function whenever the cursor moves:
+      document.onmousemove = drag;
+    } else {
+      document.ontouchend = release;
+      // call a function whenever touch drags
+      document.ontouchmove = drag;
+    }
   }
 
-  function elementDrag(event: MouseEvent) {
+  function drag(event: MouseEvent | TouchEvent) {
     event = event || window.event;
+
+    // TouchEvent has to be unwrapped
+    let locatedEvent = unwrapTouch(event);
+    if (locatedEvent === null) {
+      return;
+    }
     event.preventDefault();
+
     // calculate the new cursor position:
-    shiftX = event.clientX - startX;
-    shiftY = event.clientY - startY;
-    startX = event.clientX;
-    startY = event.clientY;
+    shiftX = locatedEvent.clientX - startX;
+    shiftY = locatedEvent.clientY - startY;
+    startX = locatedEvent.clientX;
+    startY = locatedEvent.clientY;
     // set the element's new position:
     let top = parseInt(element.style.top);
     top = Number.isNaN(top) ? 0 : top;
@@ -42,9 +63,22 @@ export default (element: HTMLElement) => {
     element.style.left = left + shiftX + 'px';
   }
 
-  function closeDragElement() {
+  function release() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+    document.ontouchend = null;
+    document.ontouchmove = null;
   }
 };
+
+function unwrapTouch(event: MouseEvent | TouchEvent): null | MouseEvent | Touch {
+  if ('touches' in event) {
+    if (event.touches.length > 1) {
+      return null;
+    }
+    return event.touches[0];
+  } else {
+    return event;
+  }
+}
