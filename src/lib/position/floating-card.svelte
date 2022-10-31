@@ -11,7 +11,7 @@
 </script>
 
 <article {ref}>
-  <div bind:this={card} class="container">
+  <div bind:this={card} class="container max-w-max">
     <slot />
   </div>
 </article>
@@ -21,7 +21,5 @@
     position: relative;
     top: 0;
     left: 0;
-
-    max-width: max-content;
   }
 </style>

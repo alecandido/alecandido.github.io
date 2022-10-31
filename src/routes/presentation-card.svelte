@@ -1,35 +1,30 @@
 <script lang="ts">
   import FloatingCard from '$lib/position/floating-card.svelte';
   import Thumbnail from '$lib/thumbnail.svelte';
+  import GlowingButton from '$lib/glowing-button.svelte';
 </script>
 
 <FloatingCard ref="presentation">
   <Thumbnail src="/profile.jpg" alt="Profile" />
 
-  <header id="titles">
-    <h1 class="title">Hi, I'm Alessandro</h1>
-    <h2 class="subtitle">Welcome to my personal page</h2>
+  <header class="p-4 mb-4">
+    <h1 class="text-3xl font-bold">Hi, I'm Alessandro</h1>
+    <h2 class="text-base font-semibold">Welcome to my personal page</h2>
   </header>
   <p>I'm Alessandro Candido, a PhD student in theoretical physics working in HEP.</p>
+
+  <div class="flex w-full justify-end m-4 md:absolute md:w-max-w md:top-16 md:right-8">
+    <GlowingButton label="Enter &rarr;" />
+  </div>
 </FloatingCard>
 
 <style>
-  #titles {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1rem;
+  :global([ref='presentation']) {
+    margin: 1.5rem;
   }
 
   :global([ref='presentation'] .container) {
     padding: 1.5rem 3rem;
-    margin: 1.5rem;
 
     background-color: white;
     border: black 2pt solid;
