@@ -1,8 +1,4 @@
 # Personal WebSite
 
-My personal website. Goals:
-
-- try to make one
-- showcase something as soon as I have time to fill it
-
-Mainly powered by `bulma` and `next.js`.
+My personal website, powered by [Svelte](https://svelte.dev) and
+[Kit](https://kit.svelte.dev).
