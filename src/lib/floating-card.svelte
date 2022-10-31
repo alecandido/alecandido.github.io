@@ -21,8 +21,9 @@
     top: 0;
     left: 0;
 
-    width: max-content;
+    max-width: max-content;
     padding: 1.5rem 3rem;
+    margin: 1.5rem;
 
     background-color: white;
 

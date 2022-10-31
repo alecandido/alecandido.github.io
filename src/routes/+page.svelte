@@ -1,18 +1,17 @@
-<!-- <script src="/assets/js/drag.js" type="text/javascript"></script> -->
-<script>
+<script lang="ts">
   import FloatingCard from '$lib/floating-card.svelte';
-  /* dragElement(document.getElementById('presentation')); */
+  import Background from '$lib/background.svelte';
 </script>
 
 <svelte:head>
   <title>Alessandro Candido</title>
 </svelte:head>
 
-<div id="bkg">
+<Background>
   <video autoplay muted loop>
     <source src="/bkg/mountain-river.mp4" type="video/mp4" />
   </video>
-</div>
+</Background>
 
 <main>
   <FloatingCard>
@@ -29,16 +28,6 @@
 </main>
 
 <style>
-  #bkg {
-    position: absolute;
-    top: 0;
-    z-index: -100;
-
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-  }
-
   main {
     width: 100vw;
     height: 100vh;
