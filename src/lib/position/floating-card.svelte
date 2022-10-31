@@ -1,7 +1,8 @@
 <script lang="ts">
-  import drag from '$lib/drag';
+  import drag from './drag';
   import { onMount } from 'svelte';
 
+  export let ref = '';
   let card: HTMLElement;
 
   onMount(() => {
@@ -9,8 +10,8 @@
   });
 </script>
 
-<article>
-  <div bind:this={card}>
+<article {ref}>
+  <div bind:this={card} class="container">
     <slot />
   </div>
 </article>
@@ -22,16 +23,5 @@
     left: 0;
 
     max-width: max-content;
-    padding: 1.5rem 3rem;
-    margin: 1.5rem;
-
-    background-color: white;
-
-    border: black 2pt solid;
-    border-radius: 1rem;
-  }
-
-  article div :global(:is(h1, h2, p)) {
-    margin: 0;
   }
 </style>
