@@ -1,6 +1,4 @@
-import skeletonPlugin from '@brainandbones/skeleton/tailwind/theme.cjs';
-
-export const config = {
+const config = {
   content: [
     './src/**/*.{html,js,svelte,ts}',
     './node_modules/@brainandbones/skeleton/**/*.{html,js,svelte,ts}'
@@ -10,7 +8,9 @@ export const config = {
     extend: {}
   },
 
-  plugins: [skeletonPlugin],
+  plugins: [require('@brainandbones/skeleton/tailwind/theme.cjs')],
 
   darkMode: 'class'
 };
+
+module.exports = config;
