@@ -7,8 +7,10 @@
   import { cubicOut } from 'svelte/easing';
 
   export let ref = '';
-  let card: HTMLElement;
   export let visible = true;
+  export let duration = 1000;
+
+  let card: HTMLElement;
 
   onMount(() => {
     drag(card);
@@ -19,7 +21,7 @@
   {#if visible}
     <div
       bind:this={card}
-      transition:scale={{ duration: 800, delay: 0, opacity: 0.3, start: 0, easing: cubicOut }}
+      transition:scale={{ duration, delay: 0, opacity: 0.3, start: 0, easing: cubicOut }}
       class="container max-w-max"
     >
       <slot />

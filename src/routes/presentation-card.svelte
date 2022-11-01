@@ -16,7 +16,7 @@
   });
 </script>
 
-<FloatingCard bind:this={card} on:click={onclick} ref="presentation">
+<FloatingCard bind:this={card} on:click={onclick} ref="presentation" duration={600}>
   <Thumbnail src="/profile.jpg" alt="Profile" href="https://github.com/AleCandido" />
 
   <header class="p-4 mb-4">
