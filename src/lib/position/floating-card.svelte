@@ -2,25 +2,18 @@
 
 <script lang="ts">
   import drag from './drag';
-  import { onMount } from 'svelte';
   import { scale } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
 
   export let ref = '';
   export let visible = true;
   export let duration = 1000;
-
-  let card: HTMLElement;
-
-  onMount(() => {
-    drag(card);
-  });
 </script>
 
 <article {ref} on:click>
   {#if visible}
     <div
-      bind:this={card}
+      use:drag
       transition:scale={{ duration, delay: 0, opacity: 0.3, start: 0, easing: cubicOut }}
       class="container max-w-max"
     >
