@@ -45,7 +45,6 @@ export default function (element: HTMLElement) {
     .attr('stroke-linecap', data.lineCap)
     .attr('id', 'vvvortex-circles');
 
-  console.log(data.frequency);
   for (let i = data.frequency; i >= 1; i--) {
     // make stroke a little larger/thinner on the outside/inner edges
     let strokeWidth;

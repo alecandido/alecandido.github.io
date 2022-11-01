@@ -3,6 +3,7 @@ import { readable } from 'svelte/store';
 
 const reducedMotionQuery = '(prefers-reduced-motion: reduce)';
 
+// XXX: access only on client (i.e. inside `onMount`), requires window
 export default readable(false, (set) => {
   set(window.matchMedia(reducedMotionQuery).matches);
 
