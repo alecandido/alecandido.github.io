@@ -2,6 +2,7 @@
   import vvvortex from './vvvortex';
 
   const startHue = Math.random() * 180;
+  export let animate = true;
 
   export let data = {
     bgColor: 'none',
@@ -19,7 +20,7 @@
   let stringy = JSON.stringify(data);
 </script>
 
-<div use:vvvortex data-vvvortex={stringy} class="w-full h-full" />
+<div use:vvvortex data-vvvortex={stringy} class="w-full h-full" class:animate />
 
 <style>
   div {
@@ -31,7 +32,7 @@
     height: 150%;
   }
 
-  :global(#vvvortex-circles) {
+  div.animate :global(#vvvortex-circles) {
     animation: spin 20s linear infinite;
     transform-origin: center;
   }

@@ -1,8 +1,10 @@
 <script>
   import SvgBackground from './vvvortex.svelte';
+
+  export let animate = true;
 </script>
 
-<svelte:component this={SvgBackground} />
+<svelte:component this={SvgBackground} {animate} />
 
 <style>
   * {
