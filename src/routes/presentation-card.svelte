@@ -1,10 +1,20 @@
 <script lang="ts">
+  import { onMount, SvelteComponent } from 'svelte';
   import FloatingCard from '$lib/position/floating-card.svelte';
   import Thumbnail from '$lib/thumbnail.svelte';
   import GlowingButton from '$lib/glowing-button.svelte';
+  import { createClickHandler } from '$lib/events/multi-click';
+  import type { Handler } from '$lib/events/types';
+
+  let card: SvelteComponent;
+  let onclick: Handler;
+
+  onMount(() => {
+    onclick = createClickHandler(2, card.toggle);
+  });
 </script>
 
-<FloatingCard ref="presentation">
+<FloatingCard bind:this={card} on:click={onclick} ref="presentation">
   <Thumbnail src="/profile.jpg" alt="Profile" />
 
   <header class="p-4 mb-4">
