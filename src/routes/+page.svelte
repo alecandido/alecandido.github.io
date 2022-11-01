@@ -2,14 +2,12 @@
   import Background from '$lib/position/background.svelte';
   import CenterMain from '$lib/position/center-main.svelte';
   import PresentationCard from './presentation-card.svelte';
-  import Svg from '$lib/bkg/svg.svelte';
+  import BkgContent from '$lib/bkg/svg.svelte';
+  /* import BkgContent from '$lib/bkg/video.svelte'; */
 </script>
 
 <Background>
-  <Svg />
-  <!--<video autoplay muted loop class="max-w-none">
-    <source src="/bkg/mountain-river.mp4" type="video/mp4" />
-  </video>-->
+  <BkgContent />
 </Background>
 
 <CenterMain>
