@@ -7,7 +7,6 @@ export function createClickHandler(threshold: number, handler: EmptyHandler) {
   return function countClicks(_event: Event) {
     clearTimeout(timerID);
     count++;
-    console.log(count);
 
     if (count >= threshold) {
       handler();
