@@ -10,7 +10,9 @@
   let onclick: Handler;
 
   onMount(() => {
-    onclick = createClickHandler(5, card.toggle);
+    onclick = createClickHandler(5, () => {
+      card.visible = false;
+    });
   });
 </script>
 

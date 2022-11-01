@@ -1,3 +1,5 @@
+<svelte:options accessors={true} />
+
 <script lang="ts">
   import drag from './drag';
   import { onMount } from 'svelte';
@@ -6,15 +8,11 @@
 
   export let ref = '';
   let card: HTMLElement;
-  let visible = true;
+  export let visible = true;
 
   onMount(() => {
     drag(card);
   });
-
-  export function toggle() {
-    visible = !visible;
-  }
 </script>
 
 <article {ref} on:click>
