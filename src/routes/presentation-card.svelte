@@ -17,7 +17,7 @@
 </script>
 
 <FloatingCard bind:this={card} on:click={onclick} ref="presentation">
-  <Thumbnail src="/profile.jpg" alt="Profile" />
+  <Thumbnail src="/profile.jpg" alt="Profile" href="https://github.com/AleCandido" />
 
   <header class="p-4 mb-4">
     <h1 class="text-3xl font-bold">Hi, I'm Alessandro</h1>
