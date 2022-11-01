@@ -26,7 +26,7 @@
   <p>I'm Alessandro Candido, a PhD student in theoretical physics working in HEP.</p>
 
   <div class="flex w-full justify-end m-4 md:absolute md:w-max-w md:top-16 md:right-8">
-    <GlowingButton label="Enter &rarr;" />
+    <GlowingButton label="Enter &rarr;" href="/landing" />
   </div>
 </FloatingCard>
 
