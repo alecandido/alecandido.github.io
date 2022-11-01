@@ -16,7 +16,7 @@ const config = {
       strict: false
     }),
     prerender: {
-      onError: 'continue'
+      handleHttpError: 'warn'
     }
   }
 };
