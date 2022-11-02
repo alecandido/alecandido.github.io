@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { writable, type Writable } from 'svelte/store';
+  import type { Writable } from 'svelte/store';
   import { RadioGroup, RadioItem } from '@brainandbones/skeleton';
   import clickOutside from '$lib/events/click-out';
 
   export let icon: string;
   export let options: string[];
+  export let store: Writable<string>;
 
-  const storeLayout: Writable<string> = writable(options[0]);
   const cols = Math.ceil(Math.sqrt(options.length));
 
   let visible = false;
@@ -17,6 +17,9 @@
   function hide() {
     visible = false;
   }
+  store.subscribe(() => {
+    hide();
+  });
 </script>
 
 <div class="relative z-20">
@@ -25,7 +28,7 @@
     <div use:clickOutside on:outclick={hide} class="relative">
       <div class="absolute">
         <RadioGroup
-          selected={storeLayout}
+          selected={store}
           display="inline-grid grid-cols-{cols} gap-2"
           background="bg-gray-900 backdrop-opacity-40"
           class="w-max mt-2"
