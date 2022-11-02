@@ -9,7 +9,8 @@
   export let store: Writable<string>;
   export let duration = 600;
 
-  const cols = Math.ceil(Math.sqrt(options.length));
+  let cols = 1;
+  $: cols = Math.ceil(Math.sqrt(options.length));
 
   let visible = false;
 
@@ -25,7 +26,7 @@
 </script>
 
 <div class="relative z-20">
-  <button class="picker z-20 btn grow-0" on:click={toggle} transition:fly={{ x: 50, duration }}
+  <button class="picker z-20 btn grow-0" on:click={toggle} in:fly={{ x: 50, duration }}
     >{icon}</button
   >
   {#if visible}
@@ -40,7 +41,7 @@
         >
           {#each options as opt}
             <RadioItem value={opt}>
-              <img src={`/bkg/${opt}.jpg`} alt={opt} class="w-16 h-16 rounded-md" />
+              <img src={`/bkg/${opt}.webp`} alt={opt} class="w-16 h-16 rounded-md" />
             </RadioItem>
           {/each}
         </RadioGroup>

@@ -4,6 +4,12 @@ const config = {
     './node_modules/@brainandbones/skeleton/**/*.{html,js,svelte,ts}'
   ],
 
+  safelist: [
+    {
+      pattern: /grid-cols-(1|2|3|4|5|6)/
+    }
+  ],
+
   theme: {
     extend: {}
   },

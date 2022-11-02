@@ -1,5 +1,7 @@
 <script lang="ts">
+  import { kinds } from '$lib/bkg/variants';
   export let animate = true;
+  export let variant: string;
 
   let video: HTMLVideoElement;
 
@@ -10,8 +12,11 @@
       video.pause();
     }
   }
+
+  let src = `/bkg/${variant}.mp4`;
+  $: if (kinds.video.elements.includes(variant)) {
+    src = `/bkg/${variant}.mp4`;
+  }
 </script>
 
-<video bind:this={video} autoplay={animate} muted loop class="max-w-none">
-  <source src="/bkg/mountain-river.mp4" type="video/mp4" />
-</video>
+<video bind:this={video} {src} autoplay={animate} muted loop class="max-w-none" />
