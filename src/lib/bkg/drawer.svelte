@@ -40,7 +40,7 @@
         >
           {#each options as opt}
             <RadioItem value={opt}>
-              <img src={`/bkg/${opt}.png`} alt={opt} class="w-16 h-16 rounded-md" />
+              <img src={`/bkg/${opt}.jpg`} alt={opt} class="w-16 h-16 rounded-md" />
             </RadioItem>
           {/each}
         </RadioGroup>
