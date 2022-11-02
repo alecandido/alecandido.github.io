@@ -10,7 +10,7 @@
   const bkgKind = writable('svg');
   const bkgVariant = writable('vvvortex');
 
-  let variants = derived(bkgKind, ($bkgKind) => kinds[$bkgKind]);
+  let variants = derived(bkgKind, ($bkgKind) => kinds[$bkgKind].elements);
 </script>
 
 <Background>
@@ -19,7 +19,7 @@
 <nav class="fixed flex m-4 z-20">
   <BkgDrawer icon="🌁" options={Object.keys(Kind)} store={bkgKind} />
   {#if $variants.length > 0}
-    <BkgDrawer icon="🎴" options={$variants} store={bkgVariant} />
+    <BkgDrawer icon={kinds[$bkgKind].icon} options={$variants} store={bkgVariant} />
   {/if}
 </nav>
 

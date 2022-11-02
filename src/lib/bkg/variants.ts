@@ -7,4 +7,7 @@ export enum Kind {
   video = 'video'
 }
 
-export const kinds: { [key: string]: string[] } = { svg: Object.keys(SVG), video: [] };
+export const kinds: { [key: string]: { icon: string; elements: string[] } } = {
+  svg: { icon: '🎴', elements: Object.keys(SVG) },
+  video: { icon: '📽️', elements: [] }
+};
