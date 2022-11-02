@@ -1,21 +1,35 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+  import reducedMotion from '$lib/preferences/reduced-motion';
+
   export let label = '';
   export let href = '-';
+
+  let animate = true;
+
+  // access reducedMotion only on client, requires window
+  onMount(async () => {
+    // reactive statements only works in top scope, so to be reactive I need to
+    // subscribe
+    reducedMotion.subscribe((value) => {
+      animate = !value;
+    });
+  });
 </script>
 
 <article class="relative">
   {#if href !== '-'}
     <a {href}>
-      <button class="inner btn anigrad">
+      <button class="inner btn anigrad" class:animate>
         {label}
       </button>
     </a>
   {:else}
-    <button class="inner btn anigrad">
+    <button class="inner btn anigrad" class:animate>
       {label}
     </button>
   {/if}
-  <span class="absolute top-4 block w-full h-full anigrad" />
+  <span class="absolute top-4 block w-full h-full anigrad" class:animate />
 </article>
 
 <style>
@@ -32,6 +46,9 @@
   .anigrad {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
+  }
+
+  .anigrad.animate {
     animation: gradient 10s ease infinite;
   }
 
