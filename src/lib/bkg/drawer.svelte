@@ -1,11 +1,13 @@
 <script lang="ts">
   import type { Writable } from 'svelte/store';
+  import { fade, fly } from 'svelte/transition';
   import { RadioGroup, RadioItem } from '@brainandbones/skeleton';
   import clickOutside from '$lib/events/click-out';
 
   export let icon: string;
   export let options: string[];
   export let store: Writable<string>;
+  export let duration = 600;
 
   const cols = Math.ceil(Math.sqrt(options.length));
 
@@ -23,7 +25,9 @@
 </script>
 
 <div class="relative z-20">
-  <button class="picker z-20 btn grow-0" on:click={toggle}>{icon}</button>
+  <button class="picker z-20 btn grow-0" on:click={toggle} transition:fly={{ x: 50, duration }}
+    >{icon}</button
+  >
   {#if visible}
     <div use:clickOutside on:outclick={hide} class="relative">
       <div class="absolute">
