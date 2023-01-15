@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { Writable } from 'svelte/store';
   import { fade, fly } from 'svelte/transition';
-  import { RadioGroup, RadioItem } from '@brainandbones/skeleton';
   import clickOutside from '$lib/events/click-out';
 
   export let icon: string;
@@ -32,19 +31,19 @@
   {#if visible}
     <div use:clickOutside on:outclick={hide} class="relative">
       <div class="absolute">
-        <RadioGroup
-          selected={store}
-          display="inline-grid grid-cols-{cols} gap-2"
-          background="bg-gray-900 backdrop-opacity-40"
-          class="w-max mt-2"
-          accent="bg-gray-700"
-        >
-          {#each options as opt}
-            <RadioItem value={opt}>
-              <img src={`/bkg/${opt}.webp`} alt={opt} class="w-16 h-16 rounded-md" />
-            </RadioItem>
-          {/each}
-        </RadioGroup>
+        <!-- <RadioGroup -->
+        <!-- selected={store} -->
+        <!-- display="inline-grid grid-cols-{cols} gap-2" -->
+        <!-- background="bg-gray-900 backdrop-opacity-40" -->
+        <!-- class="w-max mt-2" -->
+        <!-- accent="bg-gray-700" -->
+        <!-- > -->
+        <!-- {#each options as opt} -->
+        <!-- <RadioItem value={opt}> -->
+        <!-- <img src={`/bkg/${opt}.webp`} alt={opt} class="w-16 h-16 rounded-md" /> -->
+        <!-- </RadioItem> -->
+        <!-- {/each} -->
+        <!-- </RadioGroup> -->
       </div>
     </div>
   {/if}

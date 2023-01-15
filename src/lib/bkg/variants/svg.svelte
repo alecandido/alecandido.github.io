@@ -2,6 +2,7 @@
   import { onMount } from 'svelte';
   import type { ComponentType } from 'svelte';
   import type { SVG } from '../variants';
+  import Vvvortex from './svg/vvvortex.svelte';
 
   export let variant: SVG;
   export let animate = true;
@@ -10,7 +11,7 @@
 
   onMount(async () => {
     if (variant === 'vvvortex') {
-      svg = (await import(`./svg/vvvortex.svelte`)).default;
+      svg = Vvvortex;
     }
   });
 </script>
