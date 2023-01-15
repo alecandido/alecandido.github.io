@@ -1,9 +1,14 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import type { UserConfig } from 'vite';
+
 import UnoCSS from '@unocss/vite';
-import presetIcons from '@unocss/preset-icons'
 import presetUno from '@unocss/preset-uno'
 import transformerDirectives from '@unocss/transformer-directives'
+import presetAttributify from '@unocss/preset-attributify'
+import presetTagify from '@unocss/preset-tagify'
+import presetTypography from '@unocss/preset-typography'
+import presetWebFonts from '@unocss/preset-web-fonts'
+import presetIcons from '@unocss/preset-icons'
 
 
 const config: UserConfig = {
@@ -18,6 +23,10 @@ const config: UserConfig = {
             ],
             presets: [
                 presetUno(),
+                presetAttributify(),
+                presetTagify(),
+                presetTypography(),
+                presetWebFonts(),
                 presetIcons({
                     prefix: 'i-',
                     extraProperties: {
