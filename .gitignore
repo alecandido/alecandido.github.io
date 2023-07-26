@@ -7,3 +7,8 @@ node_modules
 .env.*
 !.env.example
 .vite
+
+# Devenv
+.devenv*
+devenv.local.nix
+
