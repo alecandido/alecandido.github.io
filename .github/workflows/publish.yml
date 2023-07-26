@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # autorun every two months (day 1)
+    - cron: '0 0 1 1/2 *'
   workflow_dispatch:
 
 permissions:
