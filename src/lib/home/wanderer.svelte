@@ -3,19 +3,33 @@
    * Easter egg. When the card is dismissed over the horizon, a small wanderer
    * is left standing on the floor grid: arrows (or WASD) walk it around the
    * plane, space makes it hop. The floor is the one drawn by the horizon
-   * pattern, so the figure shrinks and slows down as it walks away.
+   * pattern, so the figure shrinks and slows down as it walks away; at the
+   * edges of the view it is the floor that scrolls under its feet instead.
    */
   import { SvelteSet } from 'svelte/reactivity';
   import { fade } from 'svelte/transition';
-  import { DEPTH, H, HORIZON, unit } from '#lib/bkg/patterns/horizon.js';
+  import {
+    DEPTH,
+    FLOOR,
+    FOOT_DEPTH,
+    H,
+    HORIZON,
+    rowPace,
+    scroll,
+    unit
+  } from '#lib/bkg/patterns/horizon.svelte.ts';
   import { reducedMotion } from '#lib/preferences/reduced-motion.svelte.ts';
 
   const SIZE = { w: 80, h: 140 }; // sprite box at depth 1, in scene units
   const SPEED = 340; // lateral, scene units per second at depth 1
   const CLIMB = 1.1; // depth, in log(z) per second
-  const FARTHEST = 6;
+  const FARTHEST = 5; // depth where the floor starts scrolling instead
+  const EDGE = 0.85; // fraction of the half width where it does the same sideways
+  const PUSH = 0.6; // share of the wanderer's pace the floor takes up
   const HOP = 520;
   const GRAVITY = 1600;
+  /** Pace after holding one direction for `seconds`: a slow start, then a run. */
+  const pace = (seconds: number) => Math.min(2.4, 0.6 + seconds);
 
   const controls: Record<string, 'left' | 'right' | 'away' | 'closer' | 'hop'> = {
     ArrowLeft: 'left',
@@ -31,17 +45,26 @@
   const pressed = new SvelteSet<string>();
   const held = (action: string) => [...pressed].some((code) => controls[code] === action);
 
-  // World state: lateral position, depth, height above the floor.
+  // World state: lateral position, depth, height above the floor, and for how
+  // long each axis has been pushed the same way.
   let x = 0;
   let z = 2.2;
   let h = 0;
   let vh = 0;
+  const run = { side: 0, fore: 0, seconds: { side: 0, fore: 0 } };
 
-  let face = $state(1);
   let walking = $state(false);
   let hinted = $state(false);
   let body = $state('');
   let shadow = $state('');
+
+  const wrap = (value: number, period: number) => value - Math.floor(value / period) * period;
+
+  function push(axis: 'side' | 'fore', direction: number, dt: number) {
+    run.seconds[axis] = direction && direction === run[axis] ? run.seconds[axis] + dt : 0;
+    run[axis] = direction;
+    return direction * pace(run.seconds[axis]) * dt;
+  }
 
   function step(dt: number) {
     const u = unit(innerWidth, innerHeight);
@@ -49,19 +72,25 @@
     const bottom = H / 2 + innerHeight / (2 * u);
     const nearest = DEPTH / (bottom - HORIZON - 12);
 
-    const left = held('left');
-    const right = held('right');
-    const away = held('away');
-    const closer = held('closer');
-    walking = left !== right || away !== closer;
-    if (left !== right) {
-      face = right ? 1 : -1;
-      x += face * SPEED * Math.sqrt(z) * dt;
+    const side = Number(held('right')) - Number(held('left'));
+    const fore = Number(held('away')) - Number(held('closer'));
+    walking = side !== 0 || fore !== 0;
+    x += SPEED * Math.sqrt(z) * push('side', side, dt);
+    z *= Math.exp(CLIMB * push('fore', fore, dt));
+
+    // Past the edges, the wanderer stays and the floor moves: the column feet
+    // shift sideways, the rows slide at the pace they would pass the wanderer.
+    const edge = EDGE * halfW * z;
+    if (Math.abs(x) > edge) {
+      const over = x - Math.sign(x) * edge;
+      x -= over;
+      scroll.shift = wrap(scroll.shift - (PUSH * over) / FOOT_DEPTH, FLOOR.gap) - FLOOR.gap;
     }
-    if (away !== closer) z *= Math.exp((away ? 1 : -1) * CLIMB * dt);
-    z = Math.min(FARTHEST, Math.max(nearest, z));
-    const reach = (halfW - SIZE.w / 2) * z;
-    x = Math.min(reach, Math.max(-reach, x));
+    const bound = Math.min(FARTHEST, Math.max(nearest, z));
+    if (z !== bound) {
+      scroll.phase = wrap(scroll.phase + PUSH * (z - bound) * rowPace(bound), 1 / FLOOR.rows);
+      z = bound;
+    }
 
     if (held('hop') && h === 0) vh = HOP;
     if (h > 0 || vh > 0) {
@@ -115,7 +144,6 @@
       viewBox="-40 -140 80 140"
       width={SIZE.w}
       height={SIZE.h}
-      style:transform="scaleX({face})"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
@@ -124,7 +152,7 @@
           <stop offset="1" stop-color="var(--c-second)" />
         </linearGradient>
       </defs>
-      <!-- A kite standing on its tip, with one eye looking ahead. -->
+      <!-- A kite standing on its tip. -->
       <path d="M0,-134 L34,-52 L0,-2 L-34,-52 Z" fill="url(#wd-body)" />
       <path
         d="M0,-134 L34,-52 L0,-2"
@@ -133,8 +161,6 @@
         stroke-opacity="0.35"
         stroke-width="3"
       />
-      <circle cx="11" cy="-88" r="8" fill="var(--c-bg)" />
-      <circle cx="14" cy="-88" r="3.5" fill="var(--c-fg)" />
     </svg>
   </div>
 

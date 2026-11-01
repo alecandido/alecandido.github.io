@@ -1,15 +1,13 @@
 <script lang="ts">
   /* Synthwave horizon: striped sun over a perspective grid (after fffuel's hhhorizon). */
-  import { DEPTH, H, HORIZON, SUN, W } from './horizon.js';
+  import { columnFeet, FLOOR, H, HORIZON, rowHeights, scroll, SUN, W } from './horizon.svelte.ts';
 
   let { animate = true }: { animate?: boolean } = $props();
 
-  const VANISH = { x: W / 2, y: HORIZON };
+  // The grid follows the scroll set by whoever walks on it (see home/wanderer).
+  const rows = $derived(rowHeights(scroll.phase));
+  const feet = $derived(columnFeet(scroll.shift));
 
-  // Floor lines: perspective spacing, denser near the horizon.
-  const rows = Array.from({ length: 14 }, (_, i) => HORIZON + DEPTH * Math.pow((i + 1) / 14, 2.2));
-  // Converging verticals.
-  const columns = Array.from({ length: 21 }, (_, i) => -W + (i * 2 * W) / 20 + W / 2);
   // Stripes cutting the sun, relative to its centre; one more than fits, so
   // that rising by one spacing is seamless.
   const STEP = 42;
@@ -17,7 +15,7 @@
 </script>
 
 <div class="scene wide" class:animate>
-  <!-- Static part: sky, sun, floor and grid. -->
+  <!-- Static part: sky, sun and floor. -->
   <svg
     class="base"
     viewBox="0 0 {W} {H}"
@@ -33,29 +31,32 @@
         <stop offset="0" stop-color="var(--c-accent)" />
         <stop offset="1" stop-color="var(--c-second)" />
       </linearGradient>
-      <clipPath id="hz-floor-clip">
-        <rect x="0" y={HORIZON} width={W} height={H - HORIZON} />
-      </clipPath>
     </defs>
 
     <rect width={W} height={H} fill="url(#hz-sky)" />
     <circle cx={SUN.x} cy={SUN.y} r={SUN.r} fill="url(#hz-sun)" />
     <rect x="0" y={HORIZON} width={W} height={H - HORIZON} fill="var(--c-bg)" />
-    <g clip-path="url(#hz-floor-clip)" stroke="var(--c-second)" stroke-width="2" opacity="0.6">
-      {#each columns as x, i (i)}
-        <line x1={VANISH.x} y1={VANISH.y} x2={x} y2={H + 200} />
-      {/each}
-      {#each rows as y, i (i)}
-        <line x1="0" y1={y} x2={W} y2={y} />
-      {/each}
-    </g>
   </svg>
+
+  <!-- Floor grid: every line is its own thin layer, hanging from the horizon,
+       so that the floor can scroll without redrawing anything. -->
+  <div class="grid" style:--horizon="calc(50% + {HORIZON - H / 2} * var(--u))">
+    {#each feet as foot, i (i)}
+      <div
+        class="layer column"
+        style:transform="rotate({Math.atan2(foot, FLOOR.foot - HORIZON)}rad)"
+      ></div>
+    {/each}
+    {#each rows as y, i (i)}
+      <div class="layer row" style:transform="translateY(calc({y - HORIZON} * var(--u)))"></div>
+    {/each}
+  </div>
 
   <!-- Stripes: a layer clipped to the sun, sliding upwards. -->
   <div
     class="sun"
-    style:left="calc(50% + {SUN.x - 800 - SUN.r} * var(--u))"
-    style:top="calc(50% + {SUN.y - 500 - SUN.r} * var(--u))"
+    style:left="calc(50% + {SUN.x - W / 2 - SUN.r} * var(--u))"
+    style:top="calc(50% + {SUN.y - H / 2 - SUN.r} * var(--u))"
     style:width="calc({2 * SUN.r} * var(--u))"
     style:height="calc({2 * SUN.r} * var(--u))"
   >
@@ -74,13 +75,34 @@
   <div
     class="layer glow"
     style:left="0"
-    style:top="calc(50% + {HORIZON - 500 - 3} * var(--u))"
+    style:top="calc(50% + {HORIZON - H / 2 - 3} * var(--u))"
     style:width="100%"
     style:height="calc(6 * var(--u))"
   ></div>
 </div>
 
 <style>
+  .grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+  }
+  .grid .layer {
+    top: var(--horizon);
+    background: var(--c-second);
+    will-change: transform;
+  }
+  .row {
+    left: 0;
+    width: 100%;
+    height: calc(2 * var(--u));
+  }
+  .column {
+    left: calc(50% - 1 * var(--u));
+    width: calc(2 * var(--u));
+    height: calc(1800 * var(--u));
+    transform-origin: 50% 0;
+  }
   .sun {
     position: absolute;
     clip-path: circle(50%);
