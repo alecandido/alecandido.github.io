@@ -1,8 +1,17 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import type { UserConfig } from 'vite';
+import adapter from '@sveltejs/adapter-static';
+import UnoCSS from 'unocss/vite';
+import { defineConfig } from 'vite';
 
-const config: UserConfig = {
-	plugins: [sveltekit()]
-};
-
-export default config;
+export default defineConfig({
+  plugins: [
+    UnoCSS(),
+    sveltekit({
+      adapter: adapter({ strict: true }),
+      prerender: {
+        handleHttpError: 'warn',
+        entries: ['*']
+      }
+    })
+  ]
+});

@@ -1,0 +1,1415 @@
+{
+  "generated": "2026-11-01T10:59:16.213Z",
+  "github": {
+    "profile": {
+      "login": "alecandido",
+      "name": "Alessandro Candido",
+      "bio": "Senior Quantum Software Engineer - QRC, TII",
+      "company": "@qiboteam",
+      "location": "Abu Dhabi, Unite Arab Emirates",
+      "blog": "annibale.dev",
+      "email": "candido.ale@gmail.com",
+      "avatar": "https://avatars.githubusercontent.com/u/10830876?v=4",
+      "url": "https://github.com/alecandido",
+      "publicRepos": 61,
+      "followers": 52,
+      "since": "2015-02-03T13:27:15Z"
+    },
+    "orgs": [
+      {
+        "login": "N3PDF",
+        "url": "https://github.com/N3PDF",
+        "avatar": "https://avatars.githubusercontent.com/u/43778079?v=4"
+      },
+      {
+        "login": "qiboteam",
+        "url": "https://github.com/qiboteam",
+        "avatar": "https://avatars.githubusercontent.com/u/60135384?v=4"
+      },
+      {
+        "login": "TN4HEP",
+        "url": "https://github.com/TN4HEP",
+        "avatar": "https://avatars.githubusercontent.com/u/188063373?v=4"
+      }
+    ],
+    "repos": [
+      {
+        "group": "quantum",
+        "name": "qibo",
+        "full": "qiboteam/qibo",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibo",
+        "homepage": "https://qibo.science",
+        "description": "A full-stack framework for quantum computing.",
+        "language": "Python",
+        "stars": 369,
+        "forks": 107,
+        "archived": false,
+        "topics": [
+          "gpu",
+          "quantum",
+          "quantum-algorithms",
+          "quantum-annealing",
+          "quantum-circuit",
+          "quantum-computing"
+        ],
+        "pushed": "2026-10-30T11:12:20Z",
+        "created": "2020-02-18T08:21:10Z",
+        "commits": 158
+      },
+      {
+        "group": "quantum",
+        "name": "qibolab",
+        "full": "qiboteam/qibolab",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibolab",
+        "homepage": "https://qibo.science",
+        "description": "Quantum hardware module and drivers for Qibo.",
+        "language": "Python",
+        "stars": 62,
+        "forks": 35,
+        "archived": false,
+        "topics": [
+          "quantum-computing",
+          "quantum-control"
+        ],
+        "pushed": "2026-10-30T12:50:08Z",
+        "created": "2021-05-06T10:10:33Z",
+        "commits": 1523
+      },
+      {
+        "group": "quantum",
+        "name": "qibocal",
+        "full": "qiboteam/qibocal",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibocal",
+        "homepage": "https://qibo.science",
+        "description": "Quantum calibration, characterization and validation module for Qibo.",
+        "language": "Python",
+        "stars": 42,
+        "forks": 15,
+        "archived": false,
+        "topics": [
+          "calibration",
+          "qcvv",
+          "quantum-computing",
+          "quantum-control"
+        ],
+        "pushed": "2026-10-30T09:19:25Z",
+        "created": "2022-07-08T09:22:27Z",
+        "commits": 426
+      },
+      {
+        "group": "quantum",
+        "name": "qibocamp",
+        "full": "qiboteam/qibocamp",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibocamp",
+        "homepage": "http://qibo.science/qibocamp/",
+        "description": "Explore calibration reports interactively",
+        "language": "Vue",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2026-11-01T09:36:34Z",
+        "created": "2026-09-16T19:55:23Z",
+        "commits": 239
+      },
+      {
+        "group": "quantum",
+        "name": "qibosoq",
+        "full": "qiboteam/qibosoq",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibosoq",
+        "homepage": "https://qibo.science",
+        "description": "Qibo server for Qick",
+        "language": "Jupyter Notebook",
+        "stars": 17,
+        "forks": 2,
+        "archived": false,
+        "topics": [
+          "fpga",
+          "quantum",
+          "quantum-computing"
+        ],
+        "pushed": "2026-10-20T08:05:36Z",
+        "created": "2022-11-17T09:44:05Z",
+        "commits": 47
+      },
+      {
+        "group": "quantum",
+        "name": "qibojit",
+        "full": "qiboteam/qibojit",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibojit",
+        "homepage": "https://qibo.science",
+        "description": "Accelerating Qibo simulation with just-in-time compilation.",
+        "language": "Python",
+        "stars": 18,
+        "forks": 4,
+        "archived": false,
+        "topics": [
+          "cupy",
+          "gpu",
+          "numba",
+          "quantum",
+          "quantum-algorithms",
+          "quantum-annealing",
+          "quantum-circuit",
+          "quantum-computing"
+        ],
+        "pushed": "2026-10-28T09:49:46Z",
+        "created": "2021-04-22T20:51:53Z",
+        "commits": 38
+      },
+      {
+        "group": "quantum",
+        "name": "qibotn",
+        "full": "qiboteam/qibotn",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qibotn",
+        "homepage": "https://qibo.science",
+        "description": "The tensor-network translation module for Qibo.",
+        "language": "Python",
+        "stars": 16,
+        "forks": 6,
+        "archived": false,
+        "topics": [
+          "quantum-computing",
+          "tensor-networks"
+        ],
+        "pushed": "2026-10-20T08:07:03Z",
+        "created": "2022-03-22T09:04:05Z",
+        "commits": 112
+      },
+      {
+        "group": "quantum",
+        "name": "qiboml",
+        "full": "qiboteam/qiboml",
+        "owner": "qiboteam",
+        "url": "https://github.com/qiboteam/qiboml",
+        "homepage": "https://qibo.science",
+        "description": "Quantum Machine Learning using Qibo",
+        "language": "Jupyter Notebook",
+        "stars": 34,
+        "forks": 12,
+        "archived": false,
+        "topics": [],
+        "pushed": "2026-10-08T06:29:43Z",
+        "created": "2024-02-19T11:08:34Z",
+        "commits": 5
+      },
+      {
+        "group": "hep",
+        "name": "eko",
+        "full": "NNPDF/eko",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/eko",
+        "homepage": "https://eko.readthedocs.io",
+        "description": "Evolution Kernel Operators",
+        "language": "Python",
+        "stars": 14,
+        "forks": 9,
+        "archived": false,
+        "topics": [
+          "hep-ph",
+          "high-energy-physics",
+          "physics",
+          "python"
+        ],
+        "pushed": "2026-10-30T20:37:27Z",
+        "created": "2019-10-03T19:12:35Z",
+        "commits": 743
+      },
+      {
+        "group": "hep",
+        "name": "yadism",
+        "full": "NNPDF/yadism",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/yadism",
+        "homepage": "https://yadism.readthedocs.io",
+        "description": "Yet Another DIS Module",
+        "language": "Python",
+        "stars": 11,
+        "forks": 3,
+        "archived": false,
+        "topics": [
+          "hep-ph",
+          "high-energy-physics",
+          "physics",
+          "python"
+        ],
+        "pushed": "2026-10-30T20:21:29Z",
+        "created": "2019-11-06T10:15:51Z",
+        "commits": 933
+      },
+      {
+        "group": "hep",
+        "name": "pineappl",
+        "full": "NNPDF/pineappl",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/pineappl",
+        "homepage": "https://nnpdf.github.io/pineappl/",
+        "description": "PineAPPL is not an extension of APPLgrid",
+        "language": "Rust",
+        "stars": 18,
+        "forks": 6,
+        "archived": false,
+        "topics": [
+          "high-energy-physics"
+        ],
+        "pushed": "2026-07-23T10:35:17Z",
+        "created": "2020-03-18T18:04:24Z",
+        "commits": 204
+      },
+      {
+        "group": "hep",
+        "name": "pineko",
+        "full": "NNPDF/pineko",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/pineko",
+        "homepage": "https://pineko.readthedocs.io",
+        "description": "PineAPPL + EKO  ─➤  fast theories",
+        "language": "Python",
+        "stars": 2,
+        "forks": 0,
+        "archived": false,
+        "topics": [
+          "hep-ph",
+          "high-energy-physics",
+          "physics",
+          "python"
+        ],
+        "pushed": "2026-10-28T09:04:54Z",
+        "created": "2020-11-18T16:27:21Z",
+        "commits": 125
+      },
+      {
+        "group": "hep",
+        "name": "pinefarm",
+        "full": "NNPDF/pinefarm",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/pinefarm",
+        "homepage": "https://pinefarm.readthedocs.io",
+        "description": "Generate PineAPPL grids from PineCards",
+        "language": "Python",
+        "stars": 1,
+        "forks": 0,
+        "archived": false,
+        "topics": [
+          "hep",
+          "physics"
+        ],
+        "pushed": "2026-10-13T11:35:03Z",
+        "created": "2022-12-14T16:55:52Z",
+        "commits": 11
+      },
+      {
+        "group": "hep",
+        "name": "pinecards",
+        "full": "NNPDF/pinecards",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/pinecards",
+        "homepage": null,
+        "description": "Runcards needed to generate PineAPPL grids for NNPDF processes",
+        "language": "Fortran",
+        "stars": 3,
+        "forks": 1,
+        "archived": false,
+        "topics": [],
+        "pushed": "2026-10-14T09:31:23Z",
+        "created": "2019-01-08T15:27:04Z",
+        "commits": 257
+      },
+      {
+        "group": "hep",
+        "name": "nnusf",
+        "full": "NNPDF/nnusf",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/nnusf",
+        "homepage": "https://nnpdf.github.io/nnusf/",
+        "description": "An open source machine learning framework that provides predictions for all-energy neutrino structure functions.",
+        "language": "Python",
+        "stars": 1,
+        "forks": 0,
+        "archived": false,
+        "topics": [
+          "hep-ph",
+          "high-energy-physics",
+          "machine-learning",
+          "neural-network",
+          "neutrino-physics",
+          "physics",
+          "python"
+        ],
+        "pushed": "2024-04-02T08:49:33Z",
+        "created": "2022-05-20T09:55:19Z",
+        "commits": 141
+      },
+      {
+        "group": "hep",
+        "name": "banana",
+        "full": "NNPDF/banana",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/banana",
+        "homepage": "https://banana-hep.readthedocs.io",
+        "description": "Benchmarking AgaiNst Apfel aNd Anything",
+        "language": "Python",
+        "stars": 2,
+        "forks": 1,
+        "archived": false,
+        "topics": [
+          "benchmark-framework",
+          "hep-ph",
+          "high-energy-physics",
+          "physics",
+          "python"
+        ],
+        "pushed": "2026-10-26T09:24:45Z",
+        "created": "2020-10-29T15:48:06Z",
+        "commits": 270
+      },
+      {
+        "group": "hep",
+        "name": "nnpdf",
+        "full": "NNPDF/nnpdf",
+        "owner": "NNPDF",
+        "url": "https://github.com/NNPDF/nnpdf",
+        "homepage": "https://docs.nnpdf.science/",
+        "description": "An open-source machine learning framework for global analyses of parton distributions.",
+        "language": "Python",
+        "stars": 45,
+        "forks": 16,
+        "archived": false,
+        "topics": [
+          "hep",
+          "hep-ph",
+          "lhc",
+          "particle-physics",
+          "parton-distribution-functions",
+          "physics",
+          "quantum-chromodynamics"
+        ],
+        "pushed": "2026-10-30T20:16:19Z",
+        "created": "2018-01-19T14:30:29Z",
+        "commits": 2
+      },
+      {
+        "group": "personal",
+        "name": "show",
+        "full": "alecandido/show",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/show",
+        "homepage": null,
+        "description": null,
+        "language": "TypeScript",
+        "stars": 1,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2022-04-27T18:34:27Z",
+        "created": "2021-06-11T07:13:27Z",
+        "commits": 52
+      },
+      {
+        "group": "personal",
+        "name": "slipy",
+        "full": "alecandido/slipy",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/slipy",
+        "homepage": null,
+        "description": "My slides framework",
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [
+          "framework",
+          "python",
+          "slides"
+        ],
+        "pushed": "2021-05-23T17:17:24Z",
+        "created": "2020-10-29T20:45:15Z",
+        "commits": 110
+      },
+      {
+        "group": "personal",
+        "name": "partons",
+        "full": "alecandido/partons",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/partons",
+        "homepage": null,
+        "description": "Distribute and evaluate partonic distributions",
+        "language": "Rust",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2023-09-13T16:38:01Z",
+        "created": "2022-12-24T13:30:57Z",
+        "commits": 95
+      },
+      {
+        "group": "personal",
+        "name": "quad",
+        "full": "alecandido/quad",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/quad",
+        "homepage": null,
+        "description": null,
+        "language": "Rust",
+        "stars": 1,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2026-10-19T17:09:49Z",
+        "created": "2023-01-03T17:41:58Z",
+        "commits": 74
+      },
+      {
+        "group": "personal",
+        "name": "ndinterp",
+        "full": "alecandido/ndinterp",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/ndinterp",
+        "homepage": null,
+        "description": null,
+        "language": "Rust",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2023-09-09T08:30:55Z",
+        "created": "2022-06-26T10:24:52Z",
+        "commits": 33
+      },
+      {
+        "group": "personal",
+        "name": "CDT_2D",
+        "full": "alecandido/CDT_2D",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/CDT_2D",
+        "homepage": null,
+        "description": "My own implementation of CDT in 1+1 dimension",
+        "language": "C++",
+        "stars": 0,
+        "forks": 1,
+        "archived": false,
+        "topics": [],
+        "pushed": "2020-11-24T10:58:52Z",
+        "created": "2019-01-15T11:41:46Z",
+        "commits": 73
+      },
+      {
+        "group": "personal",
+        "name": "sphluid",
+        "full": "alecandido/sphluid",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/sphluid",
+        "homepage": null,
+        "description": "SPH fluid dynamics",
+        "language": "Rust",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2022-09-29T17:14:41Z",
+        "created": "2021-07-31T17:18:16Z",
+        "commits": 20
+      },
+      {
+        "group": "personal",
+        "name": "packutil",
+        "full": "alecandido/packutil",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/packutil",
+        "homepage": null,
+        "description": "My stuff to deal with python packaging",
+        "language": "Python",
+        "stars": 1,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2021-03-15T08:28:00Z",
+        "created": "2021-01-22T11:30:37Z",
+        "commits": 11
+      },
+      {
+        "group": "personal",
+        "name": "pydf",
+        "full": "alecandido/pydf",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/pydf",
+        "homepage": null,
+        "description": "Python native PDF interface",
+        "language": "Python",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [],
+        "pushed": "2022-06-21T07:11:30Z",
+        "created": "2022-06-16T17:38:53Z",
+        "commits": 32
+      },
+      {
+        "group": "personal",
+        "name": "cv",
+        "full": "alecandido/cv",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/cv",
+        "homepage": "https://annibale.dev/cv/",
+        "description": "My personal cv, and website publication",
+        "language": "TeX",
+        "stars": 2,
+        "forks": 1,
+        "archived": false,
+        "topics": [
+          "annibale",
+          "cv",
+          "website"
+        ],
+        "pushed": "2024-12-03T10:09:18Z",
+        "created": "2020-10-10T14:47:31Z",
+        "commits": 67
+      },
+      {
+        "group": "personal",
+        "name": "slides",
+        "full": "alecandido/slides",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/slides",
+        "homepage": "https://slides.annibale.dev",
+        "description": "Slides collection, and web publication",
+        "language": "HTML",
+        "stars": 1,
+        "forks": 1,
+        "archived": false,
+        "topics": [
+          "annibale",
+          "slides",
+          "website"
+        ],
+        "pushed": "2025-07-15T10:21:09Z",
+        "created": "2020-05-30T12:01:37Z",
+        "commits": 287
+      },
+      {
+        "group": "personal",
+        "name": "nix-config",
+        "full": "alecandido/nix-config",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/nix-config",
+        "homepage": null,
+        "description": "Personal Nix configurations",
+        "language": "Nix",
+        "stars": 0,
+        "forks": 0,
+        "archived": false,
+        "topics": [
+          "nix",
+          "nix-config",
+          "nix-configs",
+          "nix-configuration",
+          "nix-darwin",
+          "nix-flake",
+          "nixos",
+          "nixos-config",
+          "nixos-configuration"
+        ],
+        "pushed": "2026-10-22T09:20:46Z",
+        "created": "2023-04-22T17:41:35Z",
+        "commits": 626
+      },
+      {
+        "group": "personal",
+        "name": "alecandido.github.io",
+        "full": "alecandido/alecandido.github.io",
+        "owner": "alecandido",
+        "url": "https://github.com/alecandido/alecandido.github.io",
+        "homepage": "https://annibale.dev",
+        "description": "My personal webpage",
+        "language": "Svelte",
+        "stars": 3,
+        "forks": 1,
+        "archived": false,
+        "topics": [
+          "annibale",
+          "website"
+        ],
+        "pushed": "2025-03-01T08:20:06Z",
+        "created": "2019-05-30T22:07:32Z",
+        "commits": 107
+      }
+    ]
+  },
+  "publications": [
+    {
+      "id": 3069250,
+      "title": "Qiboml: towards the orchestration of quantum-classical machine learning",
+      "date": "2025-10-13",
+      "year": 2025,
+      "arxiv": "2510.11773",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": null,
+      "journal": null,
+      "type": "article",
+      "collaboration": null,
+      "citations": 5,
+      "authorCount": 15,
+      "authors": [
+        "Robbiati, Matteo",
+        "Papaluca, Andrea",
+        "Pasquale, Andrea",
+        "Pedicillo, Edoardo"
+      ],
+      "abstract": "We present Qiboml, an open-source software library for orchestrating quantum and classical components in hybrid machine learning workflows. Building on Qibo's quantum computing capabilities and integrating with popular machine learning frameworks such as TensorFlow and PyTorch, Qiboml enables the construction of quantum and hybrid models that can run on a broad range of backends: (i) multi-threaded CPUs, GPUs, and multi-GPU systems for simulation with statevector or tensor network methods; (ii) quantum processing units, both on-premise and through cloud providers. In this paper, we showcase its functionalities, including diverse simulation options, noise-aware simulations, and real-time error mitigation and calibration.",
+      "url": "https://inspirehep.net/literature/3069250"
+    },
+    {
+      "id": 2846770,
+      "title": "Combination of aN$^3$LO PDFs and implications for Higgs production cross-sections at the LHC",
+      "date": "2024-11-08",
+      "year": 2024,
+      "arxiv": "2411.05373",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.1088/1361-6471/adde78",
+      "journal": "J.Phys.G",
+      "type": "article",
+      "collaboration": null,
+      "citations": 31,
+      "authorCount": 17,
+      "authors": [
+        "Cridge, Thomas",
+        "Harland-Lang, Lucian A.",
+        "McGowan, Jamie",
+        "Thorne, Robert S."
+      ],
+      "abstract": "We discuss how the two existing approximate N$^3$LO (aN$^3$LO) sets of parton distributions (PDFs) from the MSHT20 and NNPDF4.0 series can be combined for LHC phenomenology, both in the pure QCD case and for the QCD$\\otimes$QED sets that include the photon PDF. Using the resulting combinations, we present predictions for the total inclusive cross-section for Higgs production in gluon fusion, vector boson fusion, and associated production at the LHC Run-3. For the gluon fusion and vector boson fusion channels, the corrections that arise when using correctly matched aN$^3$LO PDFs with N$^3$LO cross section calculations, compared to using NNLO PDFs, are significant, in many cases larger than the PDF uncertainty, and generally larger than the differences between the two aN$^3$LO PDF sets entering the combination. The combined aN$^3$LO PDF sets, MSHT20xNNPDF40_an3lo and MSHT20xNNPDF40_an3lo_qed, are made publicly available in the LHAPDF format and can be readily used for LHC phenomenology.",
+      "url": "https://inspirehep.net/literature/2846770"
+    },
+    {
+      "id": 2836487,
+      "title": "Qibocal: an open-source framework for calibration of self-hosted quantum devices",
+      "date": "2024-09-30",
+      "year": 2024,
+      "arxiv": "2410.00101",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": null,
+      "journal": null,
+      "type": "article",
+      "collaboration": null,
+      "citations": 8,
+      "authorCount": 19,
+      "authors": [
+        "Pasquale, Andrea",
+        "Pedicillo, Edoardo",
+        "Cereijo, Juan",
+        "Ramos-Calderer, Sergi"
+      ],
+      "abstract": "Calibration of quantum devices is fundamental to successfully deploy quantum algorithms on current available quantum hardware. We present Qibocal, an open-source software library to perform calibration and characterization of superconducting quantum devices within the Qibo framework. Qibocal completes the Qibo middleware framework by providing all necessary tools to easily (re)calibrate self-hosted quantum platforms. After presenting the layout and the features of the library, we give an overview on some of the protocols implemented to perform single and two-qubit gates calibration. Finally, we present applications involving recalibration and monitoring of superconducting platforms.",
+      "url": "https://inspirehep.net/literature/2836487"
+    },
+    {
+      "id": 2827046,
+      "title": "Transmon qubit modeling and characterization for Dark Matter search",
+      "date": "2024-09-09",
+      "year": 2024,
+      "arxiv": "2409.05988",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": "10.1109/TQE.2025.3633176",
+      "journal": "IEEE Trans.Quantum Eng.",
+      "type": "article",
+      "collaboration": null,
+      "citations": 10,
+      "authorCount": 24,
+      "authors": [
+        "Moretti, Roberto",
+        "Labranca, Danilo",
+        "Campana, Pietro",
+        "Carobene, Rodolfo"
+      ],
+      "abstract": "This study presents the design, simulation, and experimental characterization of a superconducting transmon qubit circuit prototype for potential applications in dark matter detection experiments. We describe a planar circuit design featuring two non-interacting transmon qubits, one with fixed frequency and the other flux tunable. Finite-element simulations were employed to extract key Hamiltonian parameters and optimize component geometries. The qubit was fabricated and then characterized at $20$ mK, allowing for a comparison between simulated and measured qubit parameters. Good agreement was found for transition frequencies and anharmonicities (within 1% and 10% respectively) while coupling strengths exhibited larger discrepancies (30%). We discuss potential causes for measured coherence times falling below expectations ($T_1\\sim\\,$1-2 µ s) and propose strategies for future design improvements. Notably, we demonstrate the application of a hybrid 3D-2D simulation approach for energy participation ratio evaluation, yielding a more accurate estimation of dielectric losses. This work represents an important first step in developing planar Quantum Non-Demolition (QND) single-photon counters for dark matter searches, particularly for axion and dark photon detection schemes.",
+      "url": "https://inspirehep.net/literature/2827046"
+    },
+    {
+      "id": 2818030,
+      "title": "An FONLL prescription with coexisting flavor number PDFs",
+      "date": "2024-08-14",
+      "year": 2024,
+      "arxiv": "2408.07383",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1007/JHEP10(2024)004",
+      "journal": "JHEP",
+      "type": "article",
+      "collaboration": null,
+      "citations": 25,
+      "authorCount": 5,
+      "authors": [
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Hekhorn, Felix",
+        "Magni, Giacomo"
+      ],
+      "abstract": "We present a new prescription to account for heavy quark mass effects in the determination of parton distribution functions (PDFs) based on the FONLL scheme. Our prescription makes explicit use of the freedom to choose the number of active flavors at a given scale and, thus, use coexisting PDFs with different active flavor number. This new prescription is perturbatively equivalent to the former but improves the implementation in two ways. First, it can be naturally generalized to account simultaneously for multiple heavy quark effects, such as charm and bottom effects, which can both be relevant at the same scale due to the small mass difference. Second, it can be trivially generalized to use at any fixed-order or collinear resummed accuracy, while previous prescriptions required ad-hoc expansions of the DGLAP evolution kernels for each coefficient. We supplement the paper with codes for the computation of deep inelastic scattering observables in this new prescription.",
+      "url": "https://inspirehep.net/literature/2818030"
+    },
+    {
+      "id": 2813688,
+      "title": "An open-source framework for quantum hardware control",
+      "date": "2024-07-31",
+      "year": 2024,
+      "arxiv": "2407.21737",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": null,
+      "journal": null,
+      "type": "article",
+      "collaboration": null,
+      "citations": 5,
+      "authorCount": 10,
+      "authors": [
+        "Pedicillo, Edoardo",
+        "Candido, Alessandro",
+        "Efthymiou, Stavros",
+        "Sargsyan, Hayk"
+      ],
+      "abstract": "The development of quantum computers needs reliable quantum hardware and tailored software for controlling electronics specific to various quantum platforms. Middleware is a type of computer software program that aims to provide standardized software tools across the entire pipeline, from high level execution of quantum computing algorithms to low level driver instructions tailored to specific experimental setups, including instruments. This paper presents updates to Qibolab, a software library that leverages Qibo capabilities to execute quantum algorithms on self hosted quantum hardware platforms. Qibolab offers an application programming interface (API) for instrument control through arbitrary pulses and driver operations including sweepers. This paper offers an overview of the new features implemented in Qibolab, including the redefined boundaries between platform and channel classes, the integration of an emulator for simulating quantum hardware behaviour, and it shows updated execution times benchmarks for superconducting single qubit calibration routines.",
+      "url": "https://inspirehep.net/literature/2813688"
+    },
+    {
+      "id": 2776324,
+      "title": "Bayesian inference with Gaussian processes for the determination of parton distribution functions",
+      "date": "2024-04-11",
+      "year": 2024,
+      "arxiv": "2404.07573",
+      "categories": [
+        "hep-ph",
+        "hep-lat"
+      ],
+      "doi": "10.1140/epjc/s10052-024-13100-1",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": null,
+      "citations": 40,
+      "authorCount": 4,
+      "authors": [
+        "Candido, Alessandro",
+        "Del Debbio, Luigi",
+        "Giani, Tommaso",
+        "Petrillo, Giacomo"
+      ],
+      "abstract": "We discuss a Bayesian methodology for the solution of the inverse problem underlying the determination of parton distribution functions (PDFs). In our approach, Gaussian processes (GPs) are used to model the PDF prior, while Bayes’ theorem is used in order to determine the posterior distribution of the PDFs given a set of data. We discuss the general formalism, the Bayesian inference at the level of both parameters and hyperparameters, and the simplifications which occur when the observable entering the analysis is linear in the PDF. We benchmark the new methodology in two simple examples for the determination of a single PDF flavor from a set of deep inelastic scattering (DIS) data and from a set of equal-time correlators computed using lattice QCD. We discuss our results, showing how the proposed methodology allows for a well-defined statistical interpretation of the different sources of errors entering the PDF uncertainty, and how results can be validated a posteriori.",
+      "url": "https://inspirehep.net/literature/2776324"
+    },
+    {
+      "id": 2762925,
+      "title": "The path to $\\hbox {N}^3\\hbox {LO}$ parton distributions",
+      "date": "2024-02-28",
+      "year": 2024,
+      "arxiv": "2402.18635",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.1140/epjc/s10052-024-12891-7",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": "NNPDF",
+      "citations": 121,
+      "authorCount": 18,
+      "authors": [
+        "Ball, Richard D.",
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Carrazza, Stefano"
+      ],
+      "abstract": "We extend the existing leading (LO), next-to-leading (NLO), and next-to-next-to-leading order (NNLO) NNPDF4.0 sets of parton distribution functions (PDFs) to approximate next-to-next-to-next-to-leading order ($\\hbox {aN}^3\\hbox {LO}$). We construct an approximation to the $\\hbox {N}^3\\hbox {LO}$ splitting functions that includes all available partial information from both fixed-order computations and from small and large x resummation, and estimate the uncertainty on this approximation by varying the set of basis functions used to construct the approximation. We include known $\\hbox {N}^3\\hbox {LO}$ corrections to deep-inelastic scattering structure functions and extend the FONLL general-mass scheme to $\\mathcal {O}\\left( \\alpha _s^3\\right) $ accuracy. We determine a set of $\\hbox {aN}^3\\hbox {LO}$ PDFs by accounting both for the uncertainty on splitting functions due to the incomplete knowledge of $\\hbox {N}^3\\hbox {LO}$ terms, and to the uncertainty related to missing higher corrections (MHOU), estimated by scale variation, through a theory covariance matrix formalism. We assess the perturbative stability of the resulting PDFs, we study the impact of MHOUs on them, and we compare our results to the $\\hbox {aN}^3\\hbox {LO}$ PDFs from the MSHT group. We examine the phenomenological impact of $\\hbox {aN}^3\\hbox {LO}$ corrections on parton luminosities at the LHC, and give a first assessment of the impact of $\\hbox {aN}^3\\hbox {LO}$ PDFs on the Higgs and Drell–Yan total production cross-sections. We find that the $\\hbox {aN}^3\\hbox {LO}$ NNPDF4.0 PDFs are consistent within uncertainties with their NNLO counterparts, that they improve the description of the global dataset and the perturbative convergence of Higgs and Drell–Yan cross-sections, and that MHOUs on PDFs decrease substantially with the increase of perturbative order.",
+      "url": "https://inspirehep.net/literature/2762925"
+    },
+    {
+      "id": 2752463,
+      "title": "Yadism: yet another deep-inelastic scattering module",
+      "date": "2024-01-26",
+      "year": 2024,
+      "arxiv": "2401.15187",
+      "categories": [
+        "hep-ph",
+        "physics.comp-ph"
+      ],
+      "doi": "10.1140/epjc/s10052-024-12972-7",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": null,
+      "citations": 46,
+      "authorCount": 5,
+      "authors": [
+        "Candido, Alessandro",
+        "Hekhorn, Felix",
+        "Magni, Giacomo",
+        "Rabemananjara, Tanjona R."
+      ],
+      "abstract": "We present yadism, a library for the evaluation of both polarized and unpolarized deep-inelastic scattering (DIS) structure functions and cross sections up to N$^{3}$LO in perturbative QCD. The package provides computations of observables in fixed-flavor and zero-mass variable flavor number schemes. The implementation of the general mass variable flavor number schemes is supported through the high virtuality limits for the heavy flavor coefficients. In addition, yadism provides a set of tools for the generation of interpolation grids in the PDF-independent PineAPPL format, allowing to test the PDF dependence on any DIS observable without needing to rerun the computation. This work is part of an ongoing effort to standardize the format of theory predictions in high-energy physics within the pineline framework. The code is open source, written in Python and documented to facilitate usage, integrations, and further extensions. Finally, the code has been benchmarked against the widely used APFEL++ and QCDNUM libraries.",
+      "url": "https://inspirehep.net/literature/2752463"
+    },
+    {
+      "id": 2749502,
+      "title": "Determination of the theory uncertainties from missing higher orders on NNLO parton distributions with percent accuracy",
+      "date": "2024-01-18",
+      "year": 2024,
+      "arxiv": "2401.10319",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1140/epjc/s10052-024-12772-z",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": "NNPDF",
+      "citations": 90,
+      "authorCount": 18,
+      "authors": [
+        "Ball, Richard D.",
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Carrazza, Stefano"
+      ],
+      "abstract": "We include uncertainties due to missing higher order corrections to QCD computations (MHOU) used in the determination of parton distributions (PDFs) in the recent NNPDF4.0 set of PDFs. We use our previously published methodology, based on the treatment of MHOUs and their full correlations through a theory covariance matrix determined by scale variation, now fully incorporated in the new NNPDF theory pipeline. We assess the impact of the inclusion of MHOUs on the NNPDF4.0 central values and uncertainties, and specifically show that they lead to improved consistency of the PDF determination. PDF uncertainties on physical predictions in the data region are consequently either unchanged or moderately reduced by the inclusion of MHOUs.",
+      "url": "https://inspirehep.net/literature/2749502"
+    },
+    {
+      "id": 2747770,
+      "title": "Photons in the proton: implications for the LHC",
+      "date": "2024-01-16",
+      "year": 2024,
+      "arxiv": "2401.08749",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1140/epjc/s10052-024-12731-8",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": "NNPDF",
+      "citations": 60,
+      "authorCount": 18,
+      "authors": [
+        "Ball, Richard D.",
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Carrazza, Stefano"
+      ],
+      "abstract": "We construct a set of parton distribution functions (PDFs), based on the recent NNPDF4.0 PDF set, that also include a photon PDF. The photon PDF is constructed using the LuxQED formalism, while QED evolution accounting for ${\\mathcal {O}}\\left( \\alpha \\right) $, ${\\mathcal {O}}\\left( \\alpha \\alpha _s\\right) $, and ${\\mathcal {O}}\\left( \\alpha ^2\\right) $ corrections is implemented and benchmarked by means of the EKO code. We investigate the impact of QED effects on NNPDF4.0, and compare our results both to our previous NNPDF3.1QED PDF set and to other recent PDF sets that include the photon. We assess the impact of photon-initiated processes and electroweak corrections on a variety of representative LHC processes, and find that they can reach the 5% level in vector boson pair production at large invariant mass.",
+      "url": "https://inspirehep.net/literature/2747770"
+    },
+    {
+      "id": 2717844,
+      "title": "Intrinsic charm quark valence distribution of the proton",
+      "date": "2023-11-01",
+      "year": 2023,
+      "arxiv": "2311.00743",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.1103/PhysRevD.109.L091501",
+      "journal": "Phys.Rev.D",
+      "type": "article",
+      "collaboration": "NNPDF",
+      "citations": 67,
+      "authorCount": 10,
+      "authors": [
+        "Ball, Richard D.",
+        "Candido, Alessandro",
+        "Cruz-Martinez, Juan",
+        "Forte, Stefano"
+      ],
+      "abstract": "We provide a first quantitative indication that the wave function of the proton contains unequal distributions of charm quarks and antiquarks, i.e., a nonvanishing intrinsic valence charm distribution. A significant nonvanishing valence component cannot be perturbatively generated; hence, our results reinforce previous evidence that the proton contains an intrinsic (i.e., not radiatively generated) charm quark component. We establish our result through a determination of the parton distribution functions of charm quarks and antiquarks in the proton. We propose two novel experimental probes of this intrinsic charm valence component: <math display=\"inline\"><mi>D</mi></math>-meson asymmetries in <math display=\"inline\"><mrow><mi>Z</mi><mo>+</mo><mi>c</mi></mrow></math>-jet production at the LHCb experiment and flavor-tagged structure functions at the Electron-Ion Collider.",
+      "url": "https://inspirehep.net/literature/2717844"
+    },
+    {
+      "id": 2709553,
+      "title": "Qibosoq: an open-source framework for quantum circuit RFSoC programming",
+      "date": "2023-10-09",
+      "year": 2023,
+      "arxiv": "2310.05851",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": "10.1088/2058-9565/adcd97",
+      "journal": "Quantum Sci.Technol.",
+      "type": "article",
+      "collaboration": null,
+      "citations": 9,
+      "authorCount": 6,
+      "authors": [
+        "Carobene, Rodolfo",
+        "Candido, Alessandro",
+        "Serrano, Javier",
+        "Orgaz-Fuertes, Alvaro"
+      ],
+      "abstract": "We present Qibosoq, an open-source server-side software package designed for radio frequency system on chip (RFSoC) for executing arbitrary pulse sequences and algorithms on self-hosted quantum processing units using only open-source software. Qibosoq connects the RFSoC firmware provided by Qick, a Quantum Instrumentation Control Kit, with Qibo, a quantum computing middleware framework that enables both experimental and gate-based applications. It simplifies the work of experimentalists and developers by managing client-server communication protocols, implementing tests, and validation procedures, thereby reducing the complexity of experimental setups. The client-side integration is achieved with dedicated drivers implemented in Qibolab, the specialized software module of Qibo for quantum hardware control. Therefore, this setup provides a seamless mechanism to deploy circuit-based algorithms on custom self-hosted quantum hardware platforms controlled by RFSoC electronics.",
+      "url": "https://inspirehep.net/literature/2709553"
+    },
+    {
+      "id": 2687879,
+      "title": "Qibolab: an open-source hybrid quantum operating system",
+      "date": "2023-08-11",
+      "year": 2023,
+      "arxiv": "2308.06313",
+      "categories": [
+        "quant-ph"
+      ],
+      "doi": "10.22331/q-2024-02-12-1247",
+      "journal": "Quantum",
+      "type": "article",
+      "collaboration": null,
+      "citations": 37,
+      "authorCount": 16,
+      "authors": [
+        "Efthymiou, Stavros",
+        "Orgaz-Fuertes, Alvaro",
+        "Carobene, Rodolfo",
+        "Cereijo, Juan"
+      ],
+      "abstract": "We present $\\texttt{Qibolab}$, an open-source software library for quantum hardware control integrated with the $\\texttt{Qibo}$ quantum computing middleware framework. $\\texttt{Qibolab}$ provides the software layer required to automatically execute circuit-based algorithms on custom self-hosted quantum hardware platforms. We introduce a set of objects designed to provide programmatic access to quantum control through pulses-oriented drivers for instruments, transpilers and optimization algorithms. $\\texttt{Qibolab}$ enables experimentalists and developers to delegate all complex aspects of hardware implementation to the library so they can standardize the deployment of quantum computing algorithms in a extensible hardware-agnostic way, using superconducting qubits as the first officially supported quantum technology. We first describe the status of all components of the library, then we show examples of control setup for superconducting qubits platforms. Finally, we present successful application results related to circuit-based algorithms.",
+      "url": "https://inspirehep.net/literature/2687879"
+    },
+    {
+      "id": 2684211,
+      "title": "On the positivity of $\\overline{\\textrm{MS}}$ parton distributions",
+      "date": "2023-07-31",
+      "year": 2023,
+      "arxiv": "2308.00025",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.1140/epjc/s10052-024-12681-1",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": null,
+      "citations": 35,
+      "authorCount": 4,
+      "authors": [
+        "Candido, Alessandro",
+        "Forte, Stefano",
+        "Giani, Tommaso",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "We revisit our argument that shows that parton distribution functions (PDFs) in the $\\overline{\\textrm{MS}}$ scheme are non-negative in the perturbative region, with the dual goals of clarifying its theoretical underpinnings and elucidating its domain of validity. We specifically discuss recent results proving that PDFs can turn negative at sufficiently low scale, we clarify quantitatively various aspects of our derivation of positivity in the perturbative region, and we provide an estimate for the scale above which PDF positivity holds.",
+      "url": "https://inspirehep.net/literature/2684211"
+    },
+    {
+      "id": 2641531,
+      "title": "Theory predictions in PDF fitting",
+      "date": "2023-03-13",
+      "year": 2023,
+      "arxiv": "2303.07119",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1088/1742-6596/3206/1/012121",
+      "journal": "J.Phys.Conf.Ser.",
+      "type": "conference paper",
+      "collaboration": null,
+      "citations": 1,
+      "authorCount": 5,
+      "authors": [
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Cruz-Martinez, Juan M.",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "Continuously comparing theory predictions to experimental data is a common task in analysis of particle physics such as fitting parton distribution functions (PDFs). However, typically, both the computation of scattering amplitudes and the evolution of candidate PDFs from the fitting scale to the process scale are non-trivial, computationally intensive tasks. We develop a new stack of software tools that aim to facilitate the theory predictions by computing FastKernel (FK) tables that reduce the theory computation to a linear algebra operation. Specifically, I present PineAPPL, our workhorse for grid operations, EKO, a new DGLAP solver, and yadism, a new DIS library. Alongside, I review several projects that become available with the new tools.",
+      "url": "https://inspirehep.net/literature/2641531"
+    },
+    {
+      "id": 2635876,
+      "title": "Pineline: Industrialization of high-energy theory predictions",
+      "date": "2023-02-23",
+      "year": 2023,
+      "arxiv": "2302.12124",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1016/j.cpc.2023.109061",
+      "journal": "Comput.Phys.Commun.",
+      "type": "article",
+      "collaboration": null,
+      "citations": 38,
+      "authorCount": 5,
+      "authors": [
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Cruz-Martinez, Juan M.",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "We present a collection of tools efficiently automating the computation of large sets of theory predictions for high-energy physics. Calculating predictions for different processes often require dedicated programs. These programs, however, accept inputs and produce outputs that are usually very different from each other. The industrialization of theory predictions is achieved by a framework which harmonizes inputs (runcard, parameter settings), standardizes outputs (in the form of grids), produces reusable intermediate objects, and carefully tracks all meta data required to reproduce the computation. Parameter searches and fitting of non-perturbative objects are exemplary use cases that require a full or partial re-computation of theory predictions and will thus benefit of such a toolset. As an example application we present a study of the impact of replacing NNLO QCD K-factors with the exact NNLO predictions in a PDF fit. Program Title:pineline CPC Library link to program files:https://doi.org/10.17632/dyvns7gnwy.1 Developer's repository link:https://nnpdf.github.io/pineline Licensing provisions: GPLv3 Programming language: Python, Rust Nature of the problem: The computation of theoretical quantities in particle physics often involves computationally-intensive tasks such as the calculation of differential cross sections in a systematic and reproducible way. Different groups often use different conventions and choices which makes tasks such as the fitting of physical parameters or quantities very computationally challenging and hard to reliably reproduce. Solution method: We create a pipeline of tools such that a user can define an observable and a theory framework and obtain a final object, containing all relevant theoretical information. Such objects can be then used in a variety of interchangeable ways (fitting, analysis, experimental comparisons).",
+      "url": "https://inspirehep.net/literature/2635876"
+    },
+    {
+      "id": 2634014,
+      "title": "Neutrino Structure Functions from GeV to EeV Energies",
+      "date": "2023-02-16",
+      "year": 2023,
+      "arxiv": "2302.08527",
+      "categories": [
+        "hep-ph",
+        "astro-ph.HE",
+        "hep-ex",
+        "nucl-ex",
+        "nucl-th"
+      ],
+      "doi": "10.1007/JHEP05(2023)149",
+      "journal": "JHEP",
+      "type": "article",
+      "collaboration": null,
+      "citations": 62,
+      "authorCount": 6,
+      "authors": [
+        "Candido, Alessandro",
+        "Garcia, Alfonso",
+        "Magni, Giacomo",
+        "Rabemananjara, Tanjona"
+      ],
+      "abstract": "The interpretation of present and future neutrino experiments requires accurate theoretical predictions for neutrino-nucleus scattering rates. Neutrino structure functions can be reliably evaluated in the deep-inelastic scattering regime within the perturbative QCD (pQCD) framework. At low momentum transfers ($Q^2 \\le {\\rm few}$ GeV$^2$), inelastic structure functions are however affected by large uncertainties which distort event rate predictions for neutrino energies $E_\\nu$ up to the TeV scale. Here we present a determination of neutrino inelastic structure functions valid for the complete range of energies relevant for phenomenology, from the GeV region entering oscillation analyses to the multi-EeV region accessible at neutrino telescopes. Our NNSF$\\nu$ approach combines a machine-learning parametrisation of experimental data with pQCD calculations based on state-of-the-art analyses of proton and nuclear parton distributions (PDFs). We compare our determination to other calculations, in particular to the popular Bodek-Yang model. We provide updated predictions for inclusive cross sections for a range of energies and target nuclei, including those relevant for LHC far-forward neutrino experiments such as FASER$\\nu$, SND@LHC, and the Forward Physics Facility. The NNSF$\\nu$ determination is made available as fast interpolation LHAPDF grids, and can be accessed both through an independent driver code and directly interfaced to neutrino event generators such as GENIE.",
+      "url": "https://inspirehep.net/literature/2634014"
+    },
+    {
+      "id": 2634604,
+      "title": "Inverse Problems in PDF determinations",
+      "date": "2023-02-02",
+      "year": 2023,
+      "arxiv": "2302.14731",
+      "categories": [
+        "hep-lat",
+        "hep-ph"
+      ],
+      "doi": "10.22323/1.430.0098",
+      "journal": "PoS",
+      "type": "conference paper",
+      "collaboration": null,
+      "citations": 21,
+      "authorCount": 4,
+      "authors": [
+        "Candido, Alessandro",
+        "Del Debbio, Luigi",
+        "Giani, Tommaso",
+        "Petrillo, Giacomo"
+      ],
+      "abstract": "The determination of Parton Distribution Functions from a finite set of data is a typical example of an inverse problem. Inverse problems are notoriously difficult to solve, in particular when a robust determination of the uncertainty in the result is needed. We present a Bayesian framework to deal with this problem and discuss first results from a closure test.",
+      "url": "https://inspirehep.net/literature/2634604"
+    },
+    {
+      "id": 2640970,
+      "title": "Theory Predictions for pdf Fitting",
+      "date": "2023-01-26",
+      "year": 2023,
+      "arxiv": null,
+      "categories": [],
+      "doi": null,
+      "journal": null,
+      "type": "thesis",
+      "collaboration": null,
+      "citations": 0,
+      "authorCount": 1,
+      "authors": [
+        "Candido, Alessandro"
+      ],
+      "abstract": "Parton Distribution Functions (PDF) are the theoretical object describing the colliding hadron structure, arising from the factorization property of perturbative Quantum Chromodynamics (QCD).However, these objects encode the content of the non-perturbative dynamics of large scale QCD, and it is not currently possible to compute them from first principles with the available techniques. But their universality, that is a direct consequence of factorization, allows determining PDFs from experimental data, and use the extracted value to make predictions even for any kind of processes.The main part of this thesis is dedicated to provide fast and reliable theory predictions to be used in a global PDF determination, developing a set of essential tools to make this process scalable and reproducible.Furthermore, some specific early applications of the tool set are presented, leading to remarkable results regarding proton properties.A final part is dedicated to some methodological improvements in the PDFs extraction techniques, following a novel theoretical analysis, that lead to new insights, or taking into account an alternative statisticalframework.",
+      "url": "https://inspirehep.net/literature/2640970"
+    },
+    {
+      "id": 2512958,
+      "title": "Theory pipeline for PDF fitting",
+      "date": "2022-11-18",
+      "year": 2022,
+      "arxiv": "2211.10447",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.22323/1.414.0784",
+      "journal": "PoS",
+      "type": "conference paper",
+      "collaboration": null,
+      "citations": 3,
+      "authorCount": 6,
+      "authors": [
+        "Barontini, Andrea",
+        "Candido, Alessandro",
+        "Cruz-Martinez, Juan",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "Fitting PDFs requires the integration of a broad range of datasets, both from data and theory side, into a unique framework. While for data the integration mainly consists in the standardization of the data format, for the theory predictions there are multiple ingredients involved. Different providers are developed by separate groups for different processes, with a variety of inputs (runcards) and outputs (interpolation grids). Moreover, since processes are measured at different scales, DGLAP evolution has to be provided for the PDF candidate, or precomputed into the grids. We are working towards the automation of all these steps in a unique framework, that will be useful for any PDF fitting groups, and possibly also for phenomenological studies.",
+      "url": "https://inspirehep.net/literature/2512958"
+    },
+    {
+      "id": 2153597,
+      "title": "Parton distributions and new physics searches: the Drell–Yan forward–backward asymmetry as a case study",
+      "date": "2022-09-16",
+      "year": 2022,
+      "arxiv": "2209.08115",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.1140/epjc/s10052-022-11133-y",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": null,
+      "citations": 54,
+      "authorCount": 7,
+      "authors": [
+        "Ball, Richard D.",
+        "Candido, Alessandro",
+        "Forte, Stefano",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "We discuss the sensitivity of theoretical predictions of observables used in searches for new physics to parton distributions (PDFs) at large momentum fraction x. Specifically, we consider the neutral-current Drell–Yan production of gauge bosons with invariant masses in the TeV range, for which the forward–backward asymmetry of charged leptons from the decay of the gauge boson in its rest frame is a traditional probe of new physics. We show that the qualitative behaviour of the asymmetry depends strongly on the assumptions made in determining the underlying PDFs. We discuss and compare the large-x behaviour of various different PDF sets, and find that they differ significantly. Consequently, the shape of the asymmetry observed at lower dilepton invariant masses, where all PDF sets are in reasonable agreement because of the presence of experimental constraints, is not necessarily reproduced at large masses where the PDFs are mostly unconstrained by data. It follows that the shape of the asymmetry at high masses may depend on assumptions made in the PDF parametrization, and thus deviations from the traditionally expected behaviour cannot be taken as a reliable indication of new physics. We demonstrate that forward–backward asymmetry measurements could help in constraining PDFs at large x and discuss the accuracy that would be required to disentangle the effects of new physics from uncertainties in the PDFs in this region.",
+      "url": "https://inspirehep.net/literature/2153597"
+    },
+    {
+      "id": 2136842,
+      "title": "Evidence for intrinsic charm quarks in the proton",
+      "date": "2022-08-17",
+      "year": 2022,
+      "arxiv": "2208.08372",
+      "categories": [
+        "hep-ph",
+        "hep-ex",
+        "hep-lat",
+        "nucl-ex",
+        "nucl-th"
+      ],
+      "doi": "10.1038/s41586-022-04998-2",
+      "journal": "Nature",
+      "type": "article",
+      "collaboration": "NNPDF",
+      "citations": 144,
+      "authorCount": 9,
+      "authors": [
+        "Ball, Richard D.",
+        "Candido, Alessandro",
+        "Cruz-Martinez, Juan",
+        "Forte, Stefano"
+      ],
+      "abstract": "The theory of the strong force, quantum chromodynamics, describes the proton in terms of quarks and gluons. The proton is a state of two up quarks and one down quark bound by gluons, but quantum theory predicts that in addition there is an infinite number of quark–antiquark pairs. Both light and heavy quarks, whose mass is respectively smaller or bigger than the mass of the proton, are revealed inside the proton in high-energy collisions. However, it is unclear whether heavy quarks also exist as a part of the proton wavefunction, which is determined by non-perturbative dynamics and accordingly unknown: so-called intrinsic heavy quarks$^{1}$. It has been argued for a long time that the proton could have a sizable intrinsic component of the lightest heavy quark, the charm quark. Innumerable efforts to establish intrinsic charm in the proton$^{2}$ have remained inconclusive. Here we provide evidence for intrinsic charm by exploiting a high-precision determination of the quark–gluon content of the nucleon$^{3}$ based on machine learning and a large experimental dataset. We disentangle the intrinsic charm component from charm–anticharm pairs arising from high-energy radiation$^{4}$. We establish the existence of intrinsic charm at the 3-standard-deviation level, with a momentum distribution in remarkable agreement with model predictions$^{1,5}$.We confirm these findings by comparing them to very recent data on Z-boson production with charm jets from the Large Hadron Collider beauty (LHCb) experiment$^{6}$.",
+      "url": "https://inspirehep.net/literature/2136842"
+    },
+    {
+      "id": 2059340,
+      "title": "Snowmass 2021 Whitepaper: Proton Structure at the Precision Frontier",
+      "date": "2022-03-25",
+      "year": 2022,
+      "arxiv": "2203.13923",
+      "categories": [
+        "hep-ph",
+        "hep-ex"
+      ],
+      "doi": "10.5506/APhysPolB.53.12-A1",
+      "journal": "Acta Phys.Polon.B",
+      "type": "article",
+      "collaboration": null,
+      "citations": 187,
+      "authorCount": 61,
+      "authors": [
+        "Amoroso, S.",
+        "Apyan, A.",
+        "Armesto, N.",
+        "Ball, R.D."
+      ],
+      "abstract": "An overwhelming number of theoretical predictions for hadron colliders require parton distribution functions (PDFs), which are an important ingredient of theory infrastructure for the next generation of high-energy experiments. This whitepaper summarizes the status and future prospects for determination of high-precision PDFs applicable in a wide range of energies and experiments, in particular in precision tests of the Standard Model and in new physics searches at the high-luminosity Large Hadron Collider and Electron–Ion Collider. We discuss the envisioned advancements in experimental measurements, QCD theory, global analysis methodology, and computing that are necessary to bring unpolarized PDFs in the nucleon to the N2LO and N3LO accuracy in the QCD coupling strength. Special attention is given to the new tasks that emerge in the era of the precision PDF analysis, such as those focusing on the robust control of systematic factors both in experimental measurements and theoretical computations. Various synergies between experimental and theoretical studies of the hadron structure are explored, including opportunities for studying PDFs for nuclear and meson targets, PDFs with electroweak contributions or dependence on the transverse momentum, for incisive comparisons between phenomenological models for the PDFs and computations on discrete lattice, and for cross-fertilization with machine learning/AI approaches.",
+      "url": "https://inspirehep.net/literature/2059340"
+    },
+    {
+      "id": 2029205,
+      "title": "EKO: evolution kernel operators",
+      "date": "2022-02-04",
+      "year": 2022,
+      "arxiv": "2202.02338",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1140/epjc/s10052-022-10878-w",
+      "journal": "Eur.Phys.J.C",
+      "type": "article",
+      "collaboration": null,
+      "citations": 95,
+      "authorCount": 3,
+      "authors": [
+        "Candido, Alessandro",
+        "Hekhorn, Felix",
+        "Magni, Giacomo"
+      ],
+      "abstract": "We present a new QCD evolution library for unpolarized parton distribution functions: EKO. The program solves DGLAP equations up to next-to-next-to-leading order. The unique feature of EKO is the computation of solution operators, which are independent of the boundary condition, can be stored and quickly applied to evolve several initial PDFs. The EKO approach combines the power of N-space solutions with the flexibility of a x-space delivery, that allows for an easy interface with existing codes. The code is fully open source and written in Python, with a modular structure in order to facilitate usage, readability and possible extensions. We provide a set of benchmarks with similar available tools, finding good agreement.",
+      "url": "https://inspirehep.net/literature/2029205"
+    },
+    {
+      "id": 1984790,
+      "title": "Coupling Yang--Mills with Causal Dynamical Triangulations",
+      "date": "2021-12-06",
+      "year": 2021,
+      "arxiv": "2112.03157",
+      "categories": [
+        "hep-lat",
+        "gr-qc",
+        "hep-th"
+      ],
+      "doi": "10.22323/1.396.0254",
+      "journal": "PoS",
+      "type": "conference paper",
+      "collaboration": null,
+      "citations": 0,
+      "authorCount": 4,
+      "authors": [
+        "Clemente, Giuseppe",
+        "Candido, Alessandro",
+        "D'Elia, Massimo",
+        "Rottoli, Federico"
+      ],
+      "abstract": "We discuss the algorithmic problem of\nminimal coupling gauge fields of the Yang–Mills type\nto Quantum Gravity in the approach known as Causal Dynamical Triangulations (CDT) as a\nstep towards studying, ultimately, systems of gravity coupled with bosonic and fermionic matter.\nWe first describe the algorithm for general dimensions and gauge groups\nand then focus on the results obtained from simulations of 2d CDT coupled\nto gauge fields with U(1) and SU(2) gauge groups,\nwhere we studied both observables related to gravity and gauge fields,\nand compared them with analogous simulations in the static flat case.",
+      "url": "https://inspirehep.net/literature/1984790"
+    },
+    {
+      "id": 1909966,
+      "title": "Can $\\overline{MS}$ parton distributions be negative?",
+      "date": "2021-08-24",
+      "year": 2021,
+      "arxiv": "2108.10774",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.21468/SciPostPhysProc.8.077",
+      "journal": "SciPost Phys.Proc.",
+      "type": "conference paper",
+      "collaboration": null,
+      "citations": 1,
+      "authorCount": 3,
+      "authors": [
+        "Candido, Alessandro",
+        "Forte, Stefano",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "We review our recent paper, where we proved Parton distributions functions (PDFs) to be positive at NLO in the $\\overline{MS}$ factorization scheme. We present some additional material that was useful in completing the steps for the actual proof, but we won't attempt to report on the full proof, but referring the reader to the paper itself.",
+      "url": "https://inspirehep.net/literature/1909966"
+    },
+    {
+      "id": 1826767,
+      "title": "Compact gauge fields on Causal Dynamical Triangulations: a 2D case study",
+      "date": "2020-10-29",
+      "year": 2020,
+      "arxiv": "2010.15714",
+      "categories": [
+        "hep-lat",
+        "gr-qc",
+        "hep-th"
+      ],
+      "doi": "10.1007/JHEP04(2021)184",
+      "journal": "JHEP",
+      "type": "article",
+      "collaboration": null,
+      "citations": 9,
+      "authorCount": 4,
+      "authors": [
+        "Candido, Alessandro",
+        "Clemente, Giuseppe",
+        "D'Elia, Massimo",
+        "Rottoli, Federico"
+      ],
+      "abstract": "We discuss the discretization of Yang-Mills theories on Dynamical Triangulations in the compact formulation, with gauge fields living on the links of the dual graph associated with the triangulation, and the numerical investigation of the minimally coupled system by Monte Carlo simulations. We provide, in particular, an explicit construction and implementation of the Markov chain moves for 2D Causal Dynamical Triangulations coupled to either U(1) or SU(2) gauge fields; the results of exploratory numerical simulations on a toroidal geometry are also presented for both cases. We study the critical behavior of gravity-related observables, determining the associated critical indices, which turn out to be independent of the bare gauge coupling: we obtain in particular ν = 0.496(7) for the critical index regulating the divergence of the correlation length of the volume profiles. Gauge observables are also investigated, including holonomies (torelons) and, for the U(1) gauge theory, the winding number and the topological susceptibility. An interesting result is that the critical slowing down of the topological charge, which affects various lattice field theories in the continuum limit, seems to be strongly suppressed (i.e. by orders of magnitude) by the presence of a locally variable geometry: that may suggest possible ways for improvement also in other contexts.",
+      "url": "https://inspirehep.net/literature/1826767"
+    },
+    {
+      "id": 1801135,
+      "title": "Can $ \\overline{\\mathrm{MS}} $ parton distributions be negative?",
+      "date": "2020-06-12",
+      "year": 2020,
+      "arxiv": "2006.07377",
+      "categories": [
+        "hep-ph"
+      ],
+      "doi": "10.1007/JHEP11(2020)129",
+      "journal": "JHEP",
+      "type": "article",
+      "collaboration": null,
+      "citations": 73,
+      "authorCount": 3,
+      "authors": [
+        "Candido, Alessandro",
+        "Forte, Stefano",
+        "Hekhorn, Felix"
+      ],
+      "abstract": "It is common lore that Parton Distribution Functions (PDFs) in the $ \\overline{\\mathrm{MS}} $ factorization scheme can become negative beyond leading order due to the collinear subtraction which is needed in order to define partonic cross sections. We show that this is in fact not the case and next-to-leading order (NLO) $ \\overline{\\mathrm{MS}} $ PDFs are actually positive in the perturbative regime. In order to prove this, we modify the subtraction prescription, and perform the collinear subtraction in such a way that partonic cross sections remain positive. This defines a factorization scheme in which PDFs are positive. We then show that positivity of the PDFs is preserved when transforming from this scheme to $ \\overline{\\mathrm{MS}} $, provided only the strong coupling is in the perturbative regime, such that the NLO scheme change is smaller than the LO term.",
+      "url": "https://inspirehep.net/literature/1801135"
+    }
+  ],
+  "talks": [
+    {
+      "slug": "2024-imfp",
+      "title": "Qibo",
+      "subtitle": "A quantum computing framework",
+      "event": "IMFP 2024",
+      "date": "2024-09-11",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2024-imfp"
+    },
+    {
+      "slug": "2024-qibo-core-bootstrap",
+      "title": "Qibo core bootstrap",
+      "subtitle": null,
+      "event": "Qibo core",
+      "date": "2024-05-07",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2024-qibo-core-bootstrap"
+    },
+    {
+      "slug": "2024-rfsoc-meeting",
+      "title": "Qibolab & Qibocal",
+      "subtitle": null,
+      "event": "RF 2024",
+      "date": "2024-04-18",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2024-rfsoc-meeting"
+    },
+    {
+      "slug": "2024-INFN-Trento",
+      "title": "Simulation and control software",
+      "subtitle": null,
+      "event": "Trento INFN 2024",
+      "date": "2024-02-13",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2024-INFN-Trento"
+    },
+    {
+      "slug": "2023-TH-retreat",
+      "title": "TH retreat 2023 - Alessandro Candido",
+      "subtitle": null,
+      "event": "TH retreat 2023",
+      "date": "2023-11-06",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2023-TH-retreat"
+    },
+    {
+      "slug": "2023-IFAE",
+      "title": "Il fascino intrinseco del protone",
+      "subtitle": null,
+      "event": "IFAE 2023",
+      "date": "2023-04-13",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/2023-IFAE"
+    },
+    {
+      "slug": "phd-thesis",
+      "title": "Theory Predictions",
+      "subtitle": "for PDF fitting",
+      "event": "PhD Defense",
+      "date": "2023-01-26",
+      "source": "https://github.com/alecandido/slides/tree/main/slidev/phd-thesis"
+    }
+  ]
+}

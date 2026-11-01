@@ -1,0 +1,250 @@
+/*
+ * Theme tokens. Every theme sets the same custom properties on <html>, chosen
+ * by the `data-theme` attribute; components only ever read the tokens (either
+ * directly or through the UnoCSS colour/font aliases in uno.config.ts).
+ *
+ * Adding a theme: add a `[data-theme='name']` block here, register it in
+ * themes.ts, and optionally add decorations at the bottom of this file.
+ */
+
+:root {
+  --f-sans:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  --f-serif: Georgia, Cambria, 'Times New Roman', Times, serif;
+  --f-monospace: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 200ms;
+}
+
+/* ───────────────────────── Qibocamp: light, calm, purple ───────────────────── */
+[data-theme='qibocamp'] {
+  color-scheme: light;
+  --c-bg: #f7f7f7;
+  --c-surface: #ffffff;
+  --c-raised: #ffffff;
+  --c-fg: #000000;
+  --c-muted: #4a4a4a;
+  --c-faint: #8a8a8a;
+  --c-line: rgba(0, 0, 0, 0.06);
+  --c-accent: #833dff;
+  --c-accent-fg: #ffffff;
+  --c-accent-soft: #ebe0ff;
+  --c-second: #c8a8ff;
+  --c-second-fg: #3b107e;
+
+  --f-body: var(--f-sans);
+  --f-display: var(--f-serif);
+  --f-mono: var(--f-monospace);
+
+  --r-small: 6px;
+  --r-base: 8px;
+  --r-large: 12px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(131, 61, 255, 0.05);
+  --shadow-lg: 0 4px 16px rgba(131, 61, 255, 0.1), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --heading-weight: 600;
+  --heading-tracking: -0.02em;
+  --heading-transform: none;
+}
+
+/* ─────────────────── Institute: dark, cinematic, teal & ember ──────────────── */
+[data-theme='institute'] {
+  color-scheme: dark;
+  --c-bg: #0f1821;
+  --c-surface: #172431;
+  --c-raised: #233746;
+  --c-fg: #f3f6f8;
+  --c-muted: #9dafbd;
+  --c-faint: #6b7d8a;
+  --c-line: rgba(255, 255, 255, 0.09);
+  --c-accent: #7eddd3;
+  --c-accent-fg: #0b1a22;
+  --c-accent-soft: rgba(126, 221, 211, 0.12);
+  --c-second: #ff4713;
+  --c-second-fg: #ffffff;
+
+  --f-body: 'Albert Sans Variable', var(--f-sans);
+  --f-display: 'Albert Sans Variable', var(--f-sans);
+  --f-mono: var(--f-monospace);
+
+  --r-small: 2px;
+  --r-base: 3px;
+  --r-large: 4px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --heading-weight: 700;
+  --heading-tracking: -0.01em;
+  --heading-transform: none;
+}
+
+/* ────────────────── Psycho: deep navy, magenta, mint, loud ─────────────────── */
+[data-theme='psycho'] {
+  color-scheme: dark;
+  --c-bg: #0a0d24;
+  --c-surface: #11163a;
+  --c-raised: #1a2050;
+  --c-fg: #ffffff;
+  --c-muted: #c3c6e8;
+  --c-faint: #7c80b3;
+  --c-line: rgba(45, 255, 210, 0.35);
+  --c-accent: #d250ff;
+  --c-accent-fg: #0a0d24;
+  --c-accent-soft: rgba(210, 80, 255, 0.18);
+  --c-second: #2dffd2;
+  --c-second-fg: #0a0d24;
+  --c-third: #ff004d;
+  --c-fourth: #faf115;
+
+  --f-body: 'Noto Sans Variable', var(--f-sans);
+  --f-display: 'Stick No Bills', Impact, 'Arial Narrow', sans-serif;
+  --f-mono: var(--f-monospace);
+
+  --r-small: 0px;
+  --r-base: 2px;
+  --r-large: 4px;
+  --shadow: 4px 4px 0 var(--c-second);
+  --shadow-lg: 8px 8px 0 var(--c-accent);
+  --heading-weight: 800;
+  --heading-tracking: 0.02em;
+  --heading-transform: uppercase;
+}
+
+/* ──────────────────── Cyber: black, neon yellow, HUD frames ────────────────── */
+[data-theme='cyber'] {
+  color-scheme: dark;
+  --c-bg: #050607;
+  --c-surface: #0b0e10;
+  --c-raised: #12171a;
+  --c-fg: #e8f3ee;
+  --c-muted: #93a59d;
+  --c-faint: #5c6b65;
+  --c-line: #223029;
+  --c-accent: #f2ff00;
+  --c-accent-fg: #000000;
+  --c-accent-soft: rgba(242, 255, 0, 0.1);
+  --c-second: #00f0ff;
+  --c-second-fg: #000000;
+
+  --f-body: 'JetBrains Mono Variable', var(--f-monospace);
+  --f-display: 'Orbitron', var(--f-sans);
+  --f-mono: 'JetBrains Mono Variable', var(--f-monospace);
+
+  --r-small: 0px;
+  --r-base: 0px;
+  --r-large: 0px;
+  --shadow: 0 0 0 1px var(--c-line), 0 0 24px rgba(242, 255, 0, 0.06);
+  --shadow-lg: 0 0 0 1px var(--c-accent), 0 0 32px rgba(242, 255, 0, 0.18);
+  --heading-weight: 700;
+  --heading-tracking: 0.06em;
+  --heading-transform: uppercase;
+}
+
+/* ───────────────────────────── Shared base styles ──────────────────────────── */
+
+html {
+  background: var(--c-bg);
+  color: var(--c-fg);
+  font-family: var(--f-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--f-display);
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-tracking);
+  text-transform: var(--heading-transform);
+  line-height: 1.1;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--c-accent);
+  color: var(--c-accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: 2px;
+}
+
+/* ───────────────────────────── Theme decorations ───────────────────────────── */
+
+/* Psycho: uppercase display headings with a hard magenta offset */
+[data-theme='psycho'] h1,
+[data-theme='psycho'] h2 {
+  text-shadow: 2px 2px 0 var(--c-accent);
+}
+[data-theme='psycho'] .card {
+  border-width: 2px;
+}
+
+/* Cyber: HUD corner brackets on cards and a faint scanline overlay */
+[data-theme='cyber'] .card {
+  position: relative;
+  background-image:
+    linear-gradient(rgba(242, 255, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(242, 255, 0, 0.025) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+[data-theme='cyber'] .card::before,
+[data-theme='cyber'] .card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--c-accent);
+  pointer-events: none;
+}
+[data-theme='cyber'] .card::before {
+  top: -2px;
+  left: -2px;
+  border-right: 0;
+  border-bottom: 0;
+}
+[data-theme='cyber'] .card::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: 0;
+  border-top: 0;
+}
+[data-theme='cyber'] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0 2px, rgba(0, 0, 0, 0.14) 2px 3px);
+  mix-blend-mode: multiply;
+}
+[data-theme='cyber'] h1 {
+  text-shadow:
+    0 0 12px rgba(242, 255, 0, 0.35),
+    0 0 2px var(--c-accent);
+}
+[data-theme='cyber'] .btn-primary {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 10px) 0,
+    100% 10px,
+    100% 100%,
+    10px 100%,
+    0 calc(100% - 10px)
+  );
+}
+
+/* Institute: label-like uppercase small text */
+[data-theme='institute'] .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}

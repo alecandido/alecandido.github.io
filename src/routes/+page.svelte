@@ -1,34 +1,20 @@
 <script lang="ts">
-  import { writable, derived } from 'svelte/store';
-  import CenterMain from '$lib/position/center-main.svelte';
-  import PresentationCard from './presentation-card.svelte';
-  import Background from '$lib/position/background.svelte';
-  import BkgProvider from '$lib/bkg/provider.svelte';
-  import BkgDrawer from '$lib/bkg/drawer.svelte';
-  import { Kind, kinds } from '$lib/bkg/variants';
-
-  const bkgKind = writable('svg');
-  const bkgVariant = writable('vvvortex');
-
-  let variants: string[] = [];
-  bkgKind.subscribe((value) => {
-    $bkgVariant = kinds[value].elements[0];
-    variants = kinds[$bkgKind].elements;
-  });
+  import Background from '#lib/bkg/background.svelte';
+  import Card from '#lib/home/card.svelte';
+  import Switcher from '#lib/theme/switcher.svelte';
 </script>
 
-<Background>
-  <BkgProvider kind={$bkgKind} variant={$bkgVariant} />
-</Background>
-<nav class="fixed flex m-4 z-20">
-  <BkgDrawer icon="🌁" options={Object.keys(Kind)} store={bkgKind} />
-  {#if variants.length > 0}
-    {#key $bkgKind}
-      <BkgDrawer icon={kinds[$bkgKind].icon} options={variants} store={bkgVariant} />
-    {/key}
-  {/if}
+<svelte:head>
+  <title>Alessandro Candido</title>
+  <meta name="description" content="Alessandro Candido, physicist and quantum software engineer." />
+</svelte:head>
+
+<Background />
+
+<nav class="fixed top-4 right-4 z-20">
+  <Switcher />
 </nav>
 
-<CenterMain>
-  <PresentationCard />
-</CenterMain>
+<main class="min-h-dvh w-full flex items-center justify-center overflow-hidden">
+  <Card />
+</main>

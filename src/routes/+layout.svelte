@@ -1,10 +1,15 @@
-<script>
-  import '@brainandbones/skeleton/styles/all.css';
-  import '@brainandbones/skeleton/themes/theme-skeleton.css';
-  import '../app.postcss';
-  import { MetaTags } from 'svelte-meta-tags';
+<script lang="ts">
+  import 'virtual:uno.css';
+  import '@fontsource-variable/albert-sans';
+  import '@fontsource-variable/noto-sans';
+  import '@fontsource/stick-no-bills/700.css';
+  import '@fontsource/stick-no-bills/800.css';
+  import '@fontsource/orbitron/500.css';
+  import '@fontsource/orbitron/700.css';
+  import '@fontsource-variable/jetbrains-mono';
+  import '#lib/theme/themes.css';
+
+  let { children } = $props();
 </script>
 
-<MetaTags title="Alessandro Candido" description="Personal Home Page." />
-
-<slot />
+{@render children()}
