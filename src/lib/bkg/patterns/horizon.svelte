@@ -1,15 +1,13 @@
 <script lang="ts">
   /* Synthwave horizon: striped sun over a perspective grid (after fffuel's hhhorizon). */
+  import { DEPTH, H, HORIZON, SUN, W } from './horizon.js';
+
   let { animate = true }: { animate?: boolean } = $props();
 
-  const W = 1600;
-  const H = 1000;
-  const HORIZON = 560;
   const VANISH = { x: W / 2, y: HORIZON };
-  const SUN = { x: W / 2, y: HORIZON - 60, r: 260 };
 
   // Floor lines: perspective spacing, denser near the horizon.
-  const rows = Array.from({ length: 14 }, (_, i) => HORIZON + 440 * Math.pow((i + 1) / 14, 2.2));
+  const rows = Array.from({ length: 14 }, (_, i) => HORIZON + DEPTH * Math.pow((i + 1) / 14, 2.2));
   // Converging verticals.
   const columns = Array.from({ length: 21 }, (_, i) => -W + (i * 2 * W) / 20 + W / 2);
   // Stripes cutting the sun, relative to its centre; one more than fits, so

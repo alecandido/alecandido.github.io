@@ -22,6 +22,9 @@
   import { reducedMotion } from '#lib/preferences/reduced-motion.svelte.ts';
   import './patterns/scene.css';
 
+  /** `onchoice` tells the page which background was drawn. */
+  let { onchoice }: { onchoice?: (choice: Choice) => void } = $props();
+
   /** The background is chosen on the client, so every visit gets a new one. */
   let choice: Choice | undefined = $state();
   let Pattern: Component<{ animate: boolean }> | undefined = $state();
@@ -31,6 +34,7 @@
   onMount(async () => {
     const c = forced() ?? pick();
     choice = c;
+    onchoice?.(c);
     if (c.kind === 'pattern') Pattern = (await c.pattern.load()).default;
   });
 </script>

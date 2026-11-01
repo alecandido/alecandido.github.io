@@ -7,6 +7,7 @@
   import { reducedMotion } from '#lib/preferences/reduced-motion.svelte.ts';
 
   /** Five quick clicks on the card frame hide it, leaving the background alone. */
+  let { onhide }: { onhide?: () => void } = $props();
   let visible = $state(true);
   let clicks = 0;
   let timer: ReturnType<typeof setTimeout> | undefined;
@@ -18,6 +19,7 @@
     if (clicks >= 5) {
       clicks = 0;
       visible = false;
+      onhide?.();
       return;
     }
     timer = setTimeout(() => (clicks = 0), 500);
