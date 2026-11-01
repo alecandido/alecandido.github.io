@@ -37,7 +37,7 @@ export default defineConfig({
     }
   },
   shortcuts: {
-    card: 'bg-surface text-fg rounded-tl border border-line shadow-[var(--shadow)]',
+    card: 'relative bg-surface text-fg rounded-tl border border-line shadow-[var(--shadow)]',
     'btn-base':
       'inline-flex items-center gap-2 font-medium rounded-t px-4 py-2 transition-[background-color,color,box-shadow,transform] duration-200 no-underline cursor-pointer select-none',
     'btn-primary': 'btn-base bg-accent text-accent-fg hover:brightness-110 active:translate-y-px',

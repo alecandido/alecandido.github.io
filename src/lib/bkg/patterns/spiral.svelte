@@ -17,31 +17,33 @@
     { d: spiral(8, 28, 0), color: 'var(--c-accent)', width: 14 },
     { d: spiral(8, 28, Math.PI), color: 'var(--c-second)', width: 14 }
   ];
+
+  // One square layer, large enough to keep covering the corners while it turns
+  // (sqrt(2) of the longest viewport side).
+  const R = 1420;
 </script>
 
-<svg
-  class="w-full h-full"
-  class:animate
-  viewBox="-1000 -1000 2000 2000"
-  preserveAspectRatio="xMidYMid slice"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <rect x="-1000" y="-1000" width="2000" height="2000" fill="var(--c-bg)" />
-  <g class="arms" fill="none" stroke-linecap="round" opacity="0.9">
-    {#each arms as arm, i (i)}
-      <path d={arm.d} stroke={arm.color} stroke-width={arm.width} />
-    {/each}
-  </g>
-</svg>
+<div class="scene square" class:animate>
+  <div
+    class="layer"
+    style:left="calc(50% - {R} * var(--u))"
+    style:top="calc(50% - {R} * var(--u))"
+    style:width="calc({2 * R} * var(--u))"
+    style:height="calc({2 * R} * var(--u))"
+  >
+    <svg viewBox="{-R} {-R} {2 * R} {2 * R}" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke-linecap="round" opacity="0.9">
+        {#each arms as arm, i (i)}
+          <path d={arm.d} stroke={arm.color} stroke-width={arm.width} />
+        {/each}
+      </g>
+    </svg>
+  </div>
+</div>
 
 <style>
-  .arms {
-    transform-origin: 0 0;
-    transform-box: view-box;
-  }
-  .animate .arms {
+  .animate .layer {
     animation: turn 90s linear infinite;
-    will-change: transform;
   }
   @keyframes turn {
     to {

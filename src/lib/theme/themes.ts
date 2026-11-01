@@ -28,7 +28,9 @@ export const themes = [
 
 export type ThemeId = (typeof themes)[number]['id'];
 
+/** Defaults, when nothing was chosen yet: one per colour scheme (see also app.html). */
 export const DEFAULT_THEME: ThemeId = 'qibocamp';
+export const DEFAULT_DARK_THEME: ThemeId = 'institute';
 
 export const STORAGE_KEY = 'theme';
 

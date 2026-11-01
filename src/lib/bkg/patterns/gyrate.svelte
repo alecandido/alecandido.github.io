@@ -10,46 +10,52 @@
   }
 
   const sides = 3 + Math.floor(Math.random() * 4);
-  const layers = Array.from({ length: 10 }, (_, i) => ({
-    points: polygon(sides, 120 + i * 95),
-    width: 3 + i,
-    duration: 30 + i * 9,
-    reverse: i % 2 === 1,
-    color: i % 2 ? 'var(--c-accent)' : 'var(--c-second)',
-    opacity: 1 - i * 0.07
-  }));
+  const layers = Array.from({ length: 10 }, (_, i) => {
+    const r = 120 + i * 95;
+    const width = 3 + i;
+    return {
+      points: polygon(sides, r),
+      R: r + width,
+      width,
+      duration: 30 + i * 9,
+      reverse: i % 2 === 1,
+      color: i % 2 ? 'var(--c-accent)' : 'var(--c-second)',
+      opacity: 1 - i * 0.07
+    };
+  });
 </script>
 
-<svg
-  class="w-full h-full"
-  class:animate
-  viewBox="-1000 -1000 2000 2000"
-  preserveAspectRatio="xMidYMid slice"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <rect x="-1000" y="-1000" width="2000" height="2000" fill="var(--c-bg)" />
-  <g fill="none" stroke-linejoin="round">
-    {#each layers as layer, i (i)}
-      <g class="layer" class:reverse={layer.reverse} style:animation-duration="{layer.duration}s">
+<div class="scene square" class:animate>
+  {#each layers as layer, i (i)}
+    <div
+      class="layer"
+      class:reverse={layer.reverse}
+      style:animation-duration="{layer.duration}s"
+      style:left="calc(50% - {layer.R} * var(--u))"
+      style:top="calc(50% - {layer.R} * var(--u))"
+      style:width="calc({2 * layer.R} * var(--u))"
+      style:height="calc({2 * layer.R} * var(--u))"
+    >
+      <svg
+        viewBox="{-layer.R} {-layer.R} {2 * layer.R} {2 * layer.R}"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <polygon
           points={layer.points}
+          fill="none"
           stroke={layer.color}
           stroke-width={layer.width}
+          stroke-linejoin="round"
           opacity={layer.opacity}
         />
-      </g>
-    {/each}
-  </g>
-</svg>
+      </svg>
+    </div>
+  {/each}
+</div>
 
 <style>
-  .layer {
-    transform-origin: 0 0;
-    transform-box: view-box;
-  }
   .animate .layer {
     animation: spin linear infinite;
-    will-change: transform;
   }
   .animate .layer.reverse {
     animation-direction: reverse;

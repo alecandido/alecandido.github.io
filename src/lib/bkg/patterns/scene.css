@@ -1,0 +1,46 @@
+/*
+ * Shared layout for the animated patterns.
+ *
+ * Every moving part is its own `.layer`: a plain HTML element holding a small,
+ * static SVG, animated with transform/opacity only. The browser rasterises each
+ * layer once and the compositor moves it, instead of repainting a full-screen
+ * SVG on every frame, which is what animating `<g>` elements costs.
+ *
+ * Layers are placed in "viewBox units" through `--u`, the size of one unit on
+ * screen, mirroring `preserveAspectRatio="xMidYMid slice"` of the old
+ * full-screen SVGs: `.wide` is a 1600x1000 canvas, `.square` a 2000x2000 one,
+ * both centred on the viewport.
+ */
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  contain: strict;
+  container-type: size;
+  background: var(--c-bg);
+}
+.scene.wide {
+  --u: max(0.0625cqw, 0.1cqh);
+}
+.scene.square {
+  --u: max(0.05cqw, 0.05cqh);
+}
+.scene > .base {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.scene .layer {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.scene.animate .layer {
+  will-change: transform;
+}
+.scene .layer > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}

@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <script>
-      // Apply the stored theme before paint, to avoid a flash of the default one.
+      // Apply the theme before paint, to avoid a flash of the wrong one: the
+      // stored choice, else Camp for light and Institute for dark colour schemes.
       try {
         var t = localStorage.getItem('theme');
+        if (!t && matchMedia('(prefers-color-scheme: dark)').matches) t = 'institute';
         if (t) document.documentElement.dataset.theme = t;
       } catch (e) {}
     </script>

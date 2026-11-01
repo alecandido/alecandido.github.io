@@ -36,7 +36,7 @@
     <ul
       role="listbox"
       aria-label="Theme"
-      class="card absolute right-0 mt-2 w-64 p-1.5 z-50 list-none m-0 shadow-[var(--shadow-lg)]"
+      class="card !absolute right-0 mt-2 w-64 p-1.5 z-50 list-none m-0 shadow-[var(--shadow-lg)]"
     >
       {#each themes as t (t.id)}
         <li
